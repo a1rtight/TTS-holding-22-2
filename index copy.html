@@ -1,0 +1,1919 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Exceptional accommodation and meaningful experiences. Discover handpicked hotels, apartments and more.">
+    
+    <title> Form test</title>
+  <link rel="stylesheet" href="test.css" type="text/css">
+  <link rel="stylesheet" href="formatting.css" type="text/css">
+ 
+
+<!-- CSS for Pikaday -->
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.0/css/pikaday.min.css"> -->
+
+<!-- Moment.js (used for date formatting with Pikaday) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+<!-- Pikaday JavaScript library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pikaday/1.8.0/pikaday.min.js"></script>
+
+
+
+
+  <!-- <link rel="icon" type="image/png" href="Img/IcoDm.png" media="(not all and (min-resolution: 1.5dppx)) and (prefers-color-scheme:dark)">
+  <link rel="icon" type="image/png" href="Img/IcoLm.png" media="(not all and (min-resolution: 1.5dppx)) and (prefers-color-scheme:light)">
+  <link rel="icon" type="image/svg+xml" href="Img/IcoDm.svg" media="(all and (min-resolution: 1.5dppx) and (prefers-color-scheme:dark))">
+  <link rel="icon" type="image/svg+xml" href="Img/IcoLm.svg" media="(all and (min-resolution: 1.5dppx) and (prefers-color-scheme:light))"> -->
+
+  <link rel="icon" href="Img/IcoDm.svg" media="(prefers-color-scheme:dark)">
+  <link rel="icon" href="Img/IcoLm.svg" media="(prefers-color-scheme:light)">
+
+  <link rel="mask-icon" href="Img/IcoSf.svg" color="#ffffff">
+
+  <!-- <link rel="icon" type="image/png" href="Img/favicon-96x96.png" sizes="96x96"> -->
+  <link rel="apple-touch-icon" href="favicon-120x120.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="Img/favicon-180x180.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="Img/favicon-152x152.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="Img/favicon-167x167.png">
+ 
+
+  </head>
+  <body>
+
+    <form id="asana-form">
+    <input type="checkbox" id="back-section"/><label for="back-section" id="backButton"><div>
+        <svg version="1.1" class="inline-backarrow" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 88.5 88.5" style="enable-background:new 0 0 88.5 88.5;" xml:space="preserve">
+	<path class="st0" d="M88.5,40.9v6.6H12.7l1.6,1.5l22.1,22.1l-4.7,4.9L0,44.2l31.7-31.6l4.7,4.9L14.4,39.5L12.8,41L88.5,40.9z"/>
+</svg>
+
+    </div></label>
+   
+    
+ 
+    
+    <div class="mobile-wrapper">
+      <input type="checkbox" id="next-section-2"/>
+      <input type="checkbox" id="next-section-21"/>
+      <input type="checkbox" id="next-section-22"/>
+      <input type="checkbox" id="next-section-23"/>
+      <input type="checkbox" id="next-section-3"/>
+      <input type="checkbox" id="next-section-4"/>
+      <input type="checkbox" id="next-section-5"/>
+      <input type="checkbox" id="next-section-6"/>
+      <input type="checkbox" id="next-section-7"/>
+      <input type="checkbox" id="next-section-8"/>
+      <input type="checkbox" id="next-section-9"/>
+      <input type="checkbox" id="next-section-10"/>
+      <input type="checkbox" id="next-section-11"/>
+      <input type="checkbox" id="next-section-12"/>
+      <input type="checkbox" id="next-section-13"/>
+    
+      <div class="mobile-col-container">
+        <!-- <div class="mobile-col" id="c1"><label for="next-section-2" id="london">London</label><label for="next-section-2" class="cities-2" id="miami">Miami</label></div>
+        <div class="mobile-col" id="c2"><label for="next-section-2" id="newYork">New York</label><label for="next-section-2" class="cities-2" id="coteDAzur">Cote d'Azur</label></div> -->
+
+        <div class="mobile-col" id="c1">  
+            <label for="next-section-2" data-city="London" data-color="var(--london)" id="london">London</label>
+            <label for="next-section-2" data-city="Miami" data-color="var(--miami)" class="cities-2" id="miami">Miami</label>
+        </div>
+        <div class="mobile-col" id="c2">
+            <label for="next-section-2" data-city="New York" data-color="var(--newyork)" id="newYork">New York</label>
+            <label for="next-section-2" data-city="Cote d'Azur" data-color="var(--cotedazur)" class="cities-2" id="coteDAzur">Cote d'Azur</label>
+        </div>
+        
+        
+        <div class="mobile-col" id="c21"><label for="next-section-21">City</label></div>
+        
+        <div class="mobile-col" id="c22"><label for="next-section-22"><span id="adultCount">0 Adults</span></label></div>
+        
+        <div class="mobile-col" id="c23"><label for="next-section-23"><span id="childrenCount">Children</span></label></div>
+
+        <div class="mobile-col" id="c3"><label for="next-section-3">Check in</label></div>
+        <div class="mobile-col" id="c4"><label for="next-section-4">Check out</label></div>
+        <div class="mobile-col" id="c5"><label for="next-section-5">Property type</label></div>
+        <div class="mobile-col" id="c6"><label for="next-section-6">Bed / bathrooms</label></div>  
+        <div class="mobile-col" id="c7"><label for="next-section-7">Priority</label></div>   
+        <div class="mobile-col" id="c8"><label for="next-section-8">Currency</label></div>     
+        <div class="mobile-col" id="c9"><label for="next-section-9">Cost</label></div>   
+        <div class="mobile-col" id="c10"><label for="next-section-10">Your preferences</label></div>   
+        <div class="mobile-col" id="c11"><label for="next-section-11">Your details</label></div>   
+        <div class="mobile-col" id="c12"><label for="next-section-12">Submit</label></div>
+            
+            <div class="mobile-col" id="c13"><label for="next-section-13">Confirm</label>
+                <input type="submit" value="Create Task"></div>   
+      </div>
+      
+
+      <div class="mobile-overlay">
+        
+        
+        <!-- Supporting div content goes here -->
+
+           <!-- Location select -->
+           <div id="location-select" class="hidden section-content"></div>
+        
+             <!-- Adults -->
+            <div id="adult-guests" class="hidden section-content">    
+                <button id="increaseButton" type="button">
+                    <svg class="inline-plus" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.5 88.5">
+                        <polygon points="88.5 41.1 47.4 41.1 47.4 0 41.1 0 41.1 41.1 0 41.1 0 47.4 41.1 47.4 41.1 88.5 47.4 88.5 47.4 47.4 88.5 47.4 88.5 41.1"/>
+                    </svg>
+                </button>
+               <button id="decreaseButton" type="button">
+                <svg version="1.1" class="inline-minus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 88.5 88.5" style="enable-background:new 0 0 88.5 88.5;" xml:space="preserve">
+	<rect x="0" y="41.1" class="st0" width="88.5" height="6.3"/>
+</svg>
+               </button>
+                
+            </div>
+              <!-- Children -->
+              <div id="child-guests" class="hidden section-content">
+                <button id="increaseChildrenButton" type="button">
+                    <svg class="inline-plus" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88.5 88.5">
+                        <polygon points="88.5 41.1 47.4 41.1 47.4 0 41.1 0 41.1 41.1 0 41.1 0 47.4 41.1 47.4 41.1 88.5 47.4 88.5 47.4 47.4 88.5 47.4 88.5 41.1"/>
+                    </svg>
+                </button>
+                <button id="decreaseChildrenButton" type="button">
+                    <svg version="1.1" class="inline-minus" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 88.5 88.5" style="enable-background:new 0 0 88.5 88.5;" xml:space="preserve">
+	<rect x="0" y="41.1" class="st0" width="88.5" height="6.3"/>
+</svg>
+                </button>
+              </div>
+
+        <!-- Check in calendar -->
+        <div id="checkin-cal" class="hidden section-content">
+            <div id="checkIn"><input type="text" id="check-in-datepicker" autocomplete="off" class="hidden"></div>
+           </div>
+
+        <!-- Check out calendar -->
+        <div id="checkout-cal" class="hidden section-content">
+            <div id="checkOut"><input type="text" id="check-out-datepicker" autocomplete="off" class="hidden"></div>
+        </div>
+
+        <!-- store selected results for calendars-->
+<input type="hidden" id="check_in_result" name="check_in_result">
+<input type="hidden" id="check_out_result" name="check_out_result">
+        
+        <!-- Property type -->
+        <div id="property-type" class="hidden section-content">
+            <ul class="radio-list property-type-list">
+                <li>
+                    <input type="checkbox" id="option1" name="propertyType" value="Hotel">
+                    <label for="option1">Hotel</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="option2" name="propertyType" value="Apartment">
+                    <label for="option2">Apartment</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="option3" name="propertyType" value="Serviced apartment">
+                    <label for="option3">Serviced apartment</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="option4" name="propertyType" value="Entire house">
+                    <label for="option4">Entire house</label>
+                </li>
+                <li>
+                    <input type="checkbox" id="option5" name="propertyType" value="Villa / mansion">
+                    <label for="option5">Villa / mansion</label>
+                </li>
+            </ul>
+
+</div>
+
+
+        <!-- Bed / bath -->
+        <div id="bed-bath" class="hidden section-content">
+            <ul class="radio-list bed-bath-list">
+                <li>
+                    <input type="radio" id="option1-1" name="bedBath" value="1/1">
+                    <label for="option1-1">1 bed / 1 bathroom</label>
+                </li>
+                <li>
+                    <input type="radio" id="option21" name="bedBath" value="1/2">
+                    <label for="option21">1 bed / 2 bathrooms</label>
+                </li>
+                <li>
+                    <input type="radio" id="option3-1" name="bedBath" value="2/1">
+                    <label for="option3-1">2 bed / 1 bathroom</label>
+                </li>
+                <li>
+                    <input type="radio" id="option4-1" name="bedBath" value="2/2">
+                    <label for="option4-1">2 bed / 2 bathrooms</label>
+                </li>
+                <li>
+                    <input type="radio" id="option5-1" name="bedBath" value="3/2">
+                    <label for="option5-1">3 bed / 2 bathrooms</label>
+                </li>
+                <li>
+                    <input type="radio" id="option6-1" name="bedBath" value="3/3">
+                    <label for="option6-1">3 bed / 3 bathrooms</label>
+                </li>
+                <li>
+                    <input type="radio" id="option7-1" name="bedBath" value="4+/4+">
+                    <label for="option7-1">4+ bed / 4+ bathrooms</label>
+                </li>
+            </ul>
+        </div>
+
+       <!-- Priority-->
+        <div id="priority-level" class="hidden section-content">
+            <ul class="radio-list priority-list">
+                <li>
+                    <input type="radio" id="option1-2" name="priorityLevel" value="Today">
+                    <label for="option1-2">Make a reservation today</label>
+                </li>
+                <li>
+                    <input type="radio" id="option2-2" name="priorityLevel" value="Within a week">
+                    <label for="option2-2">Make a reservation within a week</label>
+                </li>
+                <li>
+                    <input type="radio" id="option3-2" name="priorityLevel" value="This month">
+                    <label for="option3-2">Make a reservation this month</label>
+                </li>
+            </ul>
+        </div>
+        
+           <!-- Currency-->
+           <div id="currency-type" class="hidden section-content">
+            <ul class="radio-list currency-list">
+                <li>
+                    <input type="radio" id="option1-3" name="currencyType" value="£ GBP">
+                    <label for="option1-3">£ GBP</label>
+                </li>
+                <li>
+                    <input type="radio" id="option2-3" name="currencyType" value="$ USD">
+                    <label for="option2-3">$ USD</label>
+                </li>
+                <li>
+                    <input type="radio" id="option3-3" name="currencyType" value="€ EUR">
+                    <label for="option3-3">€ EUR</label>
+                </li>
+            </ul>
+        </div>
+
+             <!-- Cost-->
+             <div id="cost" class="hidden section-content">
+                <ul class="radio-list cost-list">
+                    <li>
+                        <input type="radio" id="option1-4" name="priceBand" value="First Class (1500+)">
+                        <label for="option1-4" class="currency-label">First Class 1,500+</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="option2-4" name="priceBand" value="Business (700+)">
+                        <label for="option2-4" class="currency-label">Business 700+</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="option3-4" name="priceBand" value="Economy (250+)">
+                        <label for="option3-4" class="currency-label">Economy 250+</label>
+                    </li>
+                </ul>
+            </div>
+         
+            <!--Preferences-->
+            <div id="preferences-box" class="hidden section-content">
+               
+                    <input type="text" id="preferences" class="text-field preferences-box" placeholder="Your preferences">
+            </div>
+
+    
+            <!--Your Info -->
+            <div id="details" class="hidden section-content">
+               
+                    <input type="text" id="title" class="text-field title" placeholder="Title">
+                    <input type="text" id="first-name" name="firstName"class="text-field first-name" placeholder="First name">
+                    <input type="text" id="task-name" name="taskName" class="text-field surname" placeholder="Surname">
+                    <input type="text" id="email-address" class="text-field email-address" placeholder="Email address">
+                    
+            </div>
+         
+            <!-- Confirmation -->
+            <div id="confirmation" class="hidden section-content">
+                <p id="outputCity">City</p>
+                <p id="outputCheckInDate">Check in date</p>
+                <p id="outputCheckOutDate">Check out date</p>
+                <p id="resultOutputId">Property type</p>
+               </div>
+     
+
+
+      </div>  
+    </div>
+</form>
+
+  </body>
+ 
+  <script>
+
+
+
+// COSMETIC EFFECTS
+
+// let persistentActiveLabels = new Set();
+
+
+// Style checkbox li on click
+document.querySelectorAll('input[type=checkbox]').forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+        if (checkbox.checked) {
+            checkbox.parentElement.classList.add('selected');
+        } else {
+            checkbox.parentElement.classList.remove('selected');
+        }
+    });
+});
+
+// This function checks all conditions and then updates the active-label class for the corresponding label
+function updateActiveLabelStatus() {
+    // Check for button click
+    if (buttonClicked) {
+        labelForCheckbox.classList.add('active-label');
+    } else {
+        labelForCheckbox.classList.remove('active-label');
+    }
+
+    // Check for calendar button click
+    if (calendarButtonClicked) {
+        labelForCheckbox.classList.add('active-label');
+    } else {
+        labelForCheckbox.classList.remove('active-label');
+    }
+
+    // Check for calendar button click (2nd instance)
+    if (calendarButtonClicked2) {
+        labelForCheckbox.classList.add('active-label');
+    } else {
+        labelForCheckbox.classList.remove('active-label');
+    }
+
+    // Check for checkboxes being selected
+    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    checkboxes.forEach(cb => {
+        const label = document.querySelector(`label[for="${cb.id}"]`);
+        if (cb.checked) {
+            label.classList.add('active-label');
+        } else {
+            label.classList.remove('active-label');
+        }
+    });
+}
+
+let labelForCheckbox; // Define it in the global scope
+// FUNCTIONALITY FOR + - Buttons
+function handleCheckboxAndButtons(checkboxId, increaseButtonId, decreaseButtonId) {
+    const labelForCheckbox = document.querySelector(`label[for="${checkboxId}"]`);
+    const increaseButton = document.getElementById(increaseButtonId);
+    const decreaseButton = document.getElementById(decreaseButtonId);
+    let buttonClicked = false;  // Flag to track if the buttons have been clicked
+
+    // If any of the buttons is clicked, set the buttonClicked flag to true and add the class to the label
+    [increaseButton, decreaseButton].forEach(function(button) {
+        button.addEventListener('click', function() {
+            buttonClicked = true;
+            labelForCheckbox.classList.add('active-label'); // Add the class to the label
+    
+        });
+    });
+
+    // If this label is clicked, add the class
+    labelForCheckbox.addEventListener('click', function() {
+        labelForCheckbox.classList.add('active-label');
+    });
+
+    // If any other label is clicked, check the buttonClicked flag and remove the class if necessary
+    const allLabels = document.querySelectorAll('label');
+    allLabels.forEach(function(label) {
+        if (label !== labelForCheckbox) {
+            label.addEventListener('click', function() {
+                if (!buttonClicked) {
+                    labelForCheckbox.classList.remove('active-label');
+                }
+            });
+        }
+    });
+}
+
+// Initialize the function for your desired checkboxes and their respective buttons
+handleCheckboxAndButtons('next-section-22', 'increaseButton', 'decreaseButton');
+handleCheckboxAndButtons('next-section-23', 'increaseChildrenButton', 'decreaseChildrenButton');
+// Add more calls to handleCheckboxAndButtons as needed for other checkboxes and buttons
+
+
+
+// FUNCTIONALITY FOR Calendar Buttons
+// Calendar label functions – split in 2 to avoid clashes
+let calendarButtonClicked = false;
+
+function handleLabelActivationWithCalendar(checkboxId, buttonClasses) {
+        const labelForCheckbox = document.querySelector(`label[for="${checkboxId}"]`);
+    const calendarButtons = document.querySelectorAll(buttonClasses.map(cls => `.${cls}`).join(''));
+
+    function buttonClickListener() {
+        labelForCheckbox.classList.add('active-label');
+        calendarButtonClicked = true;
+    }
+
+    calendarButtons.forEach(button => {
+        button.addEventListener('click', buttonClickListener);
+    });
+
+    // If this label is clicked, add the class
+    labelForCheckbox.addEventListener('click', function() {
+        labelForCheckbox.classList.add('active-label');
+    });
+
+    // If any other label is clicked and the calendar button was NOT clicked before,
+    // remove the class from the label
+    const allLabels = document.querySelectorAll('label');
+    allLabels.forEach(function(label) {
+        if (label !== labelForCheckbox) {
+            label.addEventListener('click', function() {
+                if (!calendarButtonClicked) {
+                    labelForCheckbox.classList.remove('active-label');
+                }
+            });
+        }
+    });
+}
+
+handleLabelActivationWithCalendar('next-section-3', ['pika-button', 'pika-day']);  // For check-in
+
+
+// Second instance
+let calendarButtonClicked2 = false;
+
+function handleLabelActivationWithCalendar2(checkboxId, buttonClasses) {
+    const labelForCheckbox = document.querySelector(`label[for="${checkboxId}"]`);
+    const calendarButtons = document.querySelectorAll(buttonClasses.map(cls => `.${cls}`).join(''));
+
+    function buttonClickListener() {
+        labelForCheckbox.classList.add('active-label');
+        calendarButtonClicked2 = true;
+    }
+
+    calendarButtons.forEach(button => {
+        button.addEventListener('click', buttonClickListener);
+    });
+
+    labelForCheckbox.addEventListener('click', function() {
+        labelForCheckbox.classList.add('active-label');
+    });
+
+    const allLabels = document.querySelectorAll('label');
+    allLabels.forEach(function(label) {
+        if (label !== labelForCheckbox) {
+            label.addEventListener('click', function() {
+                if (!calendarButtonClicked2) {
+                    labelForCheckbox.classList.remove('active-label');
+                }
+            });
+        }
+    });
+}
+
+handleLabelActivationWithCalendar2('next-section-4', ['pika-button', 'pika-day']);  // For example, check-out or any other calendar
+
+
+
+// LABEL INDICATORS FOR LISTS
+function handleLabelActivationWithCheckboxes(labelId, checkboxName) {
+    let selectedOptionsCount = 0;
+    const labelForCheckbox = document.querySelector(`label[for="${labelId}"]`);
+    const checkboxes = document.querySelectorAll(`input[name="${checkboxName}"]`);
+
+    // When a checkbox is clicked
+    checkboxes.forEach(input => {
+        input.addEventListener('change', function() {
+            if (input.checked) {
+                selectedOptionsCount++;
+            } else {
+                selectedOptionsCount--;
+            }
+
+            if (selectedOptionsCount > 0) {
+                labelForCheckbox.classList.add('active-label');
+            } else {
+                labelForCheckbox.classList.remove('active-label');
+            }
+        });
+    });
+
+    // When the label is clicked
+    labelForCheckbox.addEventListener('click', function() {
+        labelForCheckbox.classList.add('active-label');
+    });
+
+    // When any other label is clicked
+    const allLabels = document.querySelectorAll('label');
+    allLabels.forEach(function(label) {
+        if (label !== labelForCheckbox) {
+            label.addEventListener('click', function() {
+                if (selectedOptionsCount === 0) {
+                    labelForCheckbox.classList.remove('active-label');
+                }
+            });
+        }
+    });
+}
+
+// Enable sections to work with the function
+handleLabelActivationWithCheckboxes('next-section-5', 'propertyType'); 
+handleLabelActivationWithCheckboxes('next-section-6', 'bedBath'); 
+handleLabelActivationWithCheckboxes('next-section-7', 'priorityLevel'); 
+handleLabelActivationWithCheckboxes('next-section-8', 'currencyType'); 
+handleLabelActivationWithCheckboxes('next-section-9', 'priceBand'); 
+
+
+// elimitae zoom on phone
+
+document.querySelector('input').addEventListener('focus', function() {
+    document.querySelector('meta[name=viewport]').setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=10.0');
+});
+
+document.querySelector('input').addEventListener('blur', function() {
+    document.querySelector('meta[name=viewport]').setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+});
+
+
+// CUSTOM DROPDOWN FUNCTION
+// const mobileSelect = document.getElementById("mobileSelect");
+// const dropdownSelected = document.querySelector(".dropdown-selected");
+// const dropdownOptions = document.querySelector(".dropdown-options");
+
+// dropdownSelected.addEventListener("click", function() {
+//     dropdownOptions.style.display = dropdownOptions.style.display === "none" || !dropdownOptions.style.display ? "block" : "none";
+// });
+
+// dropdownOptions.addEventListener("click", function(e) {
+//     if (e.target.tagName.toLowerCase() === "li") {
+//         dropdownSelected.textContent = e.target.textContent;
+//         mobileSelect.value = e.target.getAttribute("data-value");
+//         dropdownOptions.style.display = "none";
+//     }
+// });
+
+// mobileSelect.addEventListener("change", function() {
+//     dropdownSelected.textContent = mobileSelect.options[mobileSelect.selectedIndex].text;
+// });
+
+
+
+// BASIC FUNCTIONALITY
+ // enables column classes to move 
+    let slides = ['c2', 'c21', 'c22', 'c23', 'c3', 'c4' , 'c5' , 'c6' , 'c7' , 'c8' , 'c9' ,'c10', 'c11' , 'c12' , 'c13'];
+    let currentIndex = 0;
+
+    function moveSlider() {
+      let transformValue = currentIndex * -100;
+    //   lets first slide move 2 spaces – find a better way of specifying this – target IDs 
+      if (currentIndex >= 1) {
+        transformValue -= 100;
+      }
+      if (currentIndex >= 13) {
+        transformValue -= 100;
+      }
+      let mobileCols = document.querySelectorAll('.mobile-col');
+      mobileCols.forEach(function(col) {
+        col.style.transform = `translateX(${transformValue}%)`;
+      });
+    }
+    
+    // Debugging – check indexing stage in console
+    console.log("Current Index:", currentIndex);
+
+    // Summon in all supportingsectional divs
+    
+    // LOCATION SELECT
+    const locationSelect = document.getElementById('location-select');
+    // ADULT GUESTS
+    const adultGuests = document.getElementById('adult-guests');
+    // CHILD GUESTS
+    const childGuests = document.getElementById('child-guests');
+    // CALENDAR FOR CHECK IN
+    const checkinCal = document.getElementById('checkin-cal');
+    // CALENDAR FOR CHECK OUT
+    const checkoutCal = document.getElementById('checkout-cal');
+    // PROPERTY TYPE
+    const propertyType = document.getElementById('property-type');
+    // BED / BATHROOMS
+    const bedBath = document.getElementById('bed-bath');
+     // PRIORITY LEVEL
+    const priority = document.getElementById('priority-level');
+     //CURRENCY
+    const currency = document.getElementById('currency-type');
+    //COST
+    const cost = document.getElementById('cost');
+    //COST
+    const preferencesBox = document.getElementById('preferences-box');
+    //CUSTOMER DETAILS
+    const details = document.getElementById('details');
+    // CONFIRMATION SECTION
+    const confirmation = document.getElementById('confirmation');
+
+    
+    
+    // SLIDER MOTION FUNCTION
+    const ids = ['next-section-2', 'next-section-21', 'next-section-22', 'next-section-23', 'next-section-3', 'next-section-4' , 'next-section-5', 'next-section-6', 'next-section-7' , 'next-section-8', 'next-section-9', 'next-section-10' , 'next-section-11', 'next-section-12' , 'next-section-13'];
+const elements = document.querySelectorAll(ids.map(id => `#${id}`).join(', '));
+elements.forEach(function(element) {
+    element.addEventListener('change', function() {
+        if (this.checked) {
+            console.log("Before decrement - Current Index:", currentIndex); // Debugging line
+            if (currentIndex < slides.length - 1) {
+                currentIndex++;
+                moveSlider();
+           
+            }
+        
+              // DISPLAY LOCATION SELECT
+              console.log("After decrement - Current Index:", currentIndex); // Debugging line
+            if (currentIndex === 1) {
+                locationSelect.classList.remove('hidden'); // Show checkin-cal on section 3
+            } else {
+                locationSelect.classList.add('hidden'); // Hide checkin-cal on other sections
+            }
+                    // DISPLAY ADULT GUESTS
+                    console.log("After decrement - Current Index:", currentIndex); // Debugging line
+            // if (currentIndex === 2) {
+            //     adultGuests.classList.remove('hidden'); // Show checkin-cal on section 3
+            //     labelForCheckbox.classList.add('active-label'); // Add class to the label
+            // } else {
+            //     adultGuests.classList.add('hidden'); // Hide checkin-cal on other sections
+            // }
+
+            if (currentIndex === 2) {
+    adultGuests.classList.remove('hidden');
+    if (labelForCheckbox) { // Make sure it's been assigned
+        labelForCheckbox.classList.add('active-label');
+    }
+} else {
+    adultGuests.classList.add('hidden');
+}
+
+
+            
+                // DISPLAY CHILD GUESTS
+                console.log("After decrement - Current Index:", currentIndex); // Debugging line
+            // if (currentIndex === 3) {
+            //     childGuests.classList.remove('hidden'); // Show checkin-cal on section 3
+            // } else {
+            //     childGuests.classList.add('hidden'); // Hide checkin-cal on other sections
+            // }
+            if (currentIndex === 3) {
+    childGuests.classList.remove('hidden');
+    if (labelForCheckbox) { // Make sure it's been assigned
+        labelForCheckbox.classList.add('active-label');
+    }
+} else {
+    childGuests.classList.add('hidden');
+}
+
+            // DISPLAY CALENDAR FOR CHECK IN
+            console.log("After decrement - Current Index:", currentIndex); // Debugging line
+            if (currentIndex === 4) {
+                checkinCal.classList.remove('hidden'); // Show checkin-cal on section 3
+            } 
+            
+            else {
+                checkinCal.classList.add('hidden'); // Hide checkin-cal on other sections
+            }
+
+            // DISPLAY CALENDAR FOR CHECK OUT
+             console.log("After decrement - Current Index:", currentIndex); // Debugging line
+           
+            if (currentIndex === 5) {
+                checkoutCal.classList.remove('hidden'); // Show checkin-cal on section 3
+            }
+            else {
+                checkoutCal.classList.add('hidden'); // Hide checkin-cal on other sections
+            }
+
+            // DISPLAY PROPERTY TYPE
+            console.log("After decrement - Current Index:", currentIndex); // Debugging line
+            if (currentIndex === 6) {
+                propertyType.classList.remove('hidden'); 
+            } else {
+                propertyType.classList.add('hidden'); 
+            }
+
+            // DISPLAY BED / BATHROOMS
+             console.log("After decrement - Current Index:", currentIndex); // Debugging line
+            if (currentIndex === 7) {
+                bedBath.classList.remove('hidden'); 
+            } else {
+                bedBath.classList.add('hidden'); 
+            }
+
+            // DISPLAY PRIORITY
+              console.log("After decrement - Current Index:", currentIndex); // Debugging line
+            if (currentIndex === 8) {
+                priority.classList.remove('hidden'); 
+            } else {
+                priority.classList.add('hidden'); 
+            }
+
+            // DISPLAY CURRENCY
+            console.log("After decrement - Current Index:", currentIndex); // Debugging line
+            if (currentIndex === 9) {
+                currency.classList.remove('hidden'); 
+            } else {
+                currency.classList.add('hidden'); 
+            }
+
+            // DISPLAY COST
+               console.log("After decrement - Current Index:", currentIndex); // Debugging line
+            if (currentIndex === 10) {
+                cost.classList.remove('hidden'); 
+            } else {
+                cost.classList.add('hidden'); 
+            }
+
+            // DISPLAY PREFERENCES
+                console.log("After decrement - Current Index:", currentIndex); // Debugging line
+            if (currentIndex === 11) {
+                preferencesBox.classList.remove('hidden'); 
+            } else {
+                preferencesBox.classList.add('hidden'); 
+            }
+
+               // DISPLAY DETAILS
+               console.log("After decrement - Current Index:", currentIndex); // Debugging line
+            if (currentIndex === 12) {
+                details.classList.remove('hidden'); 
+            } else {
+                details.classList.add('hidden'); 
+            }
+
+                 // DISPLAY CONFIRMATION
+                 console.log("After decrement - Current Index:", currentIndex); // Debugging line
+            if (currentIndex === 13) {
+                confirmation.classList.remove('hidden'); 
+            } else {
+                confirmation.classList.add('hidden'); 
+            }
+
+
+         
+        
+            
+            
+            this.checked = false;
+        }
+    });
+});
+
+// Back button functionality
+document.getElementById('back-section').addEventListener('change', function() {
+    if (this.checked) {
+        console.log("Before decrement - Current Index:", currentIndex); // Debugging line
+        if (currentIndex > 0) {
+            currentIndex--;
+            moveSlider();
+            console.log("After decrement - Current Index:", currentIndex); // Debugging line
+
+            // SELECTED CLASS FUNCTIONALITY FOR BACK BUTTON
+                 // Check the adultCount and remove the class if it's 0
+                 const adultCountLabel = document.querySelector('label[for="next-section-22"]');
+            if (currentAdultCount === 0) {
+                adultCountLabel.classList.remove('active-label');
+            }
+                     // Check the childrenCount and remove the class if it's 0
+                     const childrenCountLabel = document.querySelector('label[for="next-section-23"]');
+            if (currentChildrenCount === 0) {
+                childrenCountLabel.classList.remove('active-label');
+            }
+
+             // DISPLAY LOCATION SELECT
+             if (currentIndex === 1) {
+                locationSelect.classList.remove('hidden'); // Remove hidden class for index 1 
+            } else {
+                locationSelect.classList.add('hidden'); // Hide checkin-cal for other indexes
+            }
+            // DISPLAY ADULT GUESTS
+            if (currentIndex === 2) {
+                adultGuests.classList.remove('hidden'); // Remove hidden class for index 1 
+            } else {
+                adultGuests.classList.add('hidden'); // Hide checkin-cal for other indexes
+            }
+
+            
+            // DISPLAY LCHILD GUESTS
+            if (currentIndex === 3) {
+                childGuests.classList.remove('hidden'); // Remove hidden class for index 1 
+            } else {
+                childGuests.classList.add('hidden'); // Hide checkin-cal for other indexes
+            }
+
+            // DISPLAY CALENDAR FOR CHECK IN
+            if (currentIndex === 4) {
+                checkinCal.classList.remove('hidden'); // Remove hidden class for index 1 
+            } else {
+                checkinCal.classList.add('hidden'); // Hide checkin-cal for other indexes
+            }
+
+            // DISPLAY CALENDAR FOR CHECK OUT
+            if (currentIndex === 5) {
+                checkoutCal.classList.remove('hidden'); // Remove hidden class for index 2
+            } else {
+                checkoutCal.classList.add('hidden'); // Hide checkin-cal for other indexes
+            }
+
+             // DISPLAY PROPERTY TYPE
+             if (currentIndex === 6) {
+                propertyType.classList.remove('hidden'); // Remove hidden class for index 2
+            } else {
+                propertyType.classList.add('hidden'); // Hide checkin-cal for other indexes
+            }
+
+            // DISPLAY BED / BATHROOMS
+            if (currentIndex === 7) {
+                bedBath.classList.remove('hidden'); // Remove hidden class for index 2
+            } else {
+                bedBath.classList.add('hidden'); // Hide checkin-cal for other indexes
+            }
+
+            // DISPLAY PRIORITY 
+            if (currentIndex === 8) {
+                priority.classList.remove('hidden'); // Remove hidden class for index 2
+            } else {
+                priority.classList.add('hidden'); // Hide checkin-cal for other indexes
+            }
+
+             // DISPLAY CURRENCY 
+             if (currentIndex === 9) {
+                currency.classList.remove('hidden'); // Remove hidden class for index 2
+            } else {
+                currency.classList.add('hidden'); // Hide checkin-cal for other indexes
+            }
+
+              // DISPLAY COST
+              if (currentIndex === 10) {
+                cost.classList.remove('hidden'); // Remove hidden class for index 2
+            } else {
+                cost.classList.add('hidden'); // Hide checkin-cal for other indexes
+            }
+
+            // DISPLAY PREFERENCES
+            if (currentIndex === 11) {
+                preferencesBox.classList.remove('hidden'); 
+            } else {
+                preferencesBox.classList.add('hidden'); 
+            }
+
+            // DISPLAY DETAILS
+            if (currentIndex === 12) {
+                details.classList.remove('hidden'); 
+            } else {
+                details.classList.add('hidden'); 
+            }
+
+            // DISPLAY CONFIRMATION
+            if (currentIndex === 13) {
+                confirmation.classList.remove('hidden'); 
+            } else {
+                confirmation.classList.add('hidden'); 
+            }
+
+
+        }
+
+        this.checked = false;
+    }
+});
+
+
+// SWIPE FUNCTIONALITY FOR SLIDER
+// Swipe to toggle hidden divs
+function updateSectionVisibility() {
+
+    // NOT WORKING FOR SOME REASON
+    locationSelect.classList.toggle('hidden', currentIndex !== 1);
+    
+    // Update adult guests visibility
+    adultGuests.classList.toggle('hidden', currentIndex !== 2);
+
+     // Update adult guests visibility
+     childGuests.classList.toggle('hidden', currentIndex !== 3);
+
+    // Update adult guests visibility
+    checkinCal.classList.toggle('hidden', currentIndex !== 4);
+
+    // Update adult guests visibility
+    checkoutCal.classList.toggle('hidden', currentIndex !== 5);
+
+    // Update adult guests visibility
+    propertyType.classList.toggle('hidden', currentIndex !== 6);
+
+    // Update adult guests visibility
+    bedBath.classList.toggle('hidden', currentIndex !== 7);
+
+    // Update adult guests visibility
+    priority.classList.toggle('hidden', currentIndex !== 8);
+
+     // Update adult guests visibility
+     currency.classList.toggle('hidden', currentIndex !== 9);
+
+      // Update adult guests visibility
+    cost.classList.toggle('hidden', currentIndex !== 10);
+
+    // Update adult guests visibility
+    preferencesBox.classList.toggle('hidden', currentIndex !== 11);
+
+    // Update adult guests visibility
+    details.classList.toggle('hidden', currentIndex !== 12);
+
+    // Update adult guests visibility
+    confirmation.classList.toggle('hidden', currentIndex !== 13);
+}
+
+
+// SWIPE FUNCTIONALITY
+let startX;
+let moved = false;
+let prevIndex = -1;
+
+// Mapping between currentIndex and label IDs
+let indexLabelMapping = {
+   
+    2: 'next-section-22',
+    3: 'next-section-23',
+    4: 'next-section-3',
+    5: 'next-section-4',
+    6: 'next-section-5',
+    7: 'next-section-6',
+    8: 'next-section-7',
+    9: 'next-section-8',
+    10: 'next-section-9',
+    11: 'next-section-10',
+    12: 'next-section-11',
+    // Add more mappings as needed...
+};
+
+document.addEventListener('touchstart', function(e) {
+    startX = e.touches[0].clientX;
+    moved = false;
+    prevIndex = currentIndex;
+}, false);
+
+document.addEventListener('touchmove', function() {
+    moved = true;
+}, false);
+
+document.addEventListener('touchend', function(e) {
+    if (!moved) return;
+
+    let endX = e.changedTouches[0].clientX;
+    let threshold = 50;
+
+    if (startX - endX > threshold) {
+        if (currentIndex < slides.length - 1) {
+            currentIndex++;
+            moveSlider();
+            updateSectionVisibility();
+        }
+    } else if (endX - startX > threshold) {
+        if (currentIndex > 0) {
+            currentIndex--;
+            moveSlider();
+            updateSectionVisibility();
+        }
+    }
+// ADDS LABEL STYLING ON SWIPE
+    // Get the label ID based on the currentIndex
+    const currentLabelId = indexLabelMapping[currentIndex];
+
+    // Remove active-label from all labels
+    Object.values(indexLabelMapping).forEach(id => {
+        const label = document.querySelector(`label[for="${id}"]`);
+        if (label) label.classList.remove('active-label');
+    });
+
+    // Now, add active-label to the label based on currentIndex
+    const targetLabel = document.querySelector(`label[for="${currentLabelId}"]`);
+    if (targetLabel) targetLabel.classList.add('active-label');
+}, false);
+
+
+
+
+
+// PLUS MINUS BUTTONS 
+// Get the button and label elements for adults
+// const increaseButton = document.getElementById('increaseButton');
+// const decreaseButton = document.getElementById('decreaseButton');
+const adultSpanElement = document.getElementById('adultCount');
+
+// Get the button and label elements for children
+const increaseChildrenButton = document.getElementById('increaseChildrenButton');
+const decreaseChildrenButton = document.getElementById('decreaseChildrenButton');
+const childrenSpanElement = document.getElementById('childrenCount');
+
+const MIN_COUNT = 0;
+const MAX_COUNT = 20;
+
+let currentAdultCount = 0; 
+let currentChildrenCount = 0;
+
+
+// Update the adult span text + Update the label's selected status
+function updateAdultLabel() {
+    const labelForCheckbox = document.querySelector('label[for="next-section-22"]'); 
+
+    if (currentAdultCount === 0) {
+        adultSpanElement.textContent = 'Adults';
+        labelForCheckbox.classList.remove('active-label');  // Remove the actve class when count is 0
+    } else if (currentAdultCount === 1) {
+        adultSpanElement.textContent = '1 Adult';
+    } else {
+        adultSpanElement.textContent = currentAdultCount + ' Adults';
+    }
+}
+
+
+
+// Update the children span text
+function updateChildrenLabel() {
+    const labelForCheckbox = document.querySelector('label[for="next-section-23"]'); 
+    if (currentChildrenCount === 0) {
+        childrenSpanElement.textContent = 'Children';
+        labelForCheckbox.classList.remove('active-label');  // Remove the actve class when count is 0
+    } else if (currentChildrenCount === 1) {
+        childrenSpanElement.textContent = '1 Child';
+    } else {
+        childrenSpanElement.textContent = currentChildrenCount + ' Children';
+    }
+}
+
+// Bind the button click event listeners for adults
+increaseButton.addEventListener('click', () => {
+    if (currentAdultCount < MAX_COUNT) {
+        currentAdultCount++;
+        updateAdultLabel();
+    }
+});
+
+decreaseButton.addEventListener('click', () => {
+    if (currentAdultCount > MIN_COUNT) {
+        currentAdultCount--;
+        updateAdultLabel();
+    }
+});
+
+// Bind the button click event listeners for children
+increaseChildrenButton.addEventListener('click', () => {
+    if (currentChildrenCount < MAX_COUNT) {
+        currentChildrenCount++;
+        updateChildrenLabel();
+    }
+});
+
+decreaseChildrenButton.addEventListener('click', () => {
+    if (currentChildrenCount > MIN_COUNT) {
+        currentChildrenCount--;
+        updateChildrenLabel();
+    }
+});
+
+// Initial label updates
+updateAdultLabel();
+updateChildrenLabel();
+
+
+
+
+
+
+// Output the Check in calendar result
+function updateCheckInDate(date) {
+    const outputElement = document.getElementById('outputCheckInDate');
+    if (outputElement) {
+        outputElement.textContent = date;
+    }
+}
+
+// Check in calendar function
+var checkInPicker = new Pikaday({
+    field: document.getElementById('check-in-datepicker'),
+    minDate: new Date(),
+    bound: false,
+    container: document.getElementById('calendar-container'),
+    i18n: {  // Adding the i18n configuration
+        months        : ['January','February','March','April','May','June','July','August','September','October','November','December'],
+        weekdays      : ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
+        weekdaysShort : ['Su','Mo','Tu','We','Th','Fr','Sa']
+    },
+
+
+    onClose: function() {
+        checkInPicker.isVisible = true;
+    },
+    onSelect: function(date) {
+        var formattedDate = formatDateWithSuffix(date);
+        
+        // Get the label for next-section-3 and update its text
+        var label = document.querySelector('label[for="next-section-3"]');
+        if (label) {
+            label.textContent = formattedDate;
+
+             // Add the 'active-label' class and set the flag
+        label.classList.add('active-label');
+        calendarButtonClicked = true;
+    }
+
+    // Update confirmation text
+    updateCheckInDate(formattedDate);
+    
+        // Store the formattedDate in the hidden input 'check_in_result'
+        document.getElementById('check_in_result').value = formattedDate;
+
+        // Set minDate of checkOutPicker to the selected date of checkInPicker
+        checkOutPicker.setMinDate(date);
+        checkOutPicker.gotoDate(date); 
+
+        // Introduce a brief delay to allow for Pikaday updates to complete and find the date selected from the checkin calendar
+        setTimeout(() => {
+            const checkOutCalendarContainer = document.getElementById('checkout-cal');
+            if (checkOutCalendarContainer) {
+                const disabledCells = checkOutCalendarContainer.querySelectorAll('td.is-disabled');
+                if (disabledCells && disabledCells.length > 0) {
+                    var lastDisabledCell = disabledCells[disabledCells.length - 1];
+                    var firstEnabledCellAfterDisabled = lastDisabledCell.nextElementSibling;
+
+                    if (firstEnabledCellAfterDisabled) {
+                        firstEnabledCellAfterDisabled.classList.add('highlight-class');
+                        console.log("The 'highlight-class' should be applied now.");
+                    } else {
+                        console.log("No enabled cell found after the last disabled cell.");
+                    }
+
+                    if (firstEnabledCellAfterDisabled && firstEnabledCellAfterDisabled.classList.contains('highlight-class')) {
+                        console.log("The 'highlight-class' is present on the targeted cell.");
+                    } else {
+                        console.log("The 'highlight-class' is not present on the targeted cell.");
+                    }
+                } else {
+                    console.log("Couldn't find any disabled cells.");
+                }
+            }
+        }, 0);
+    }
+    
+    
+});
+
+
+
+
+
+
+// Function to apply the highlight class to the check out calendar
+function applyHighlightClass() {
+    const checkOutCalendarContainer = document.getElementById('checkout-cal');
+    if (checkOutCalendarContainer) {
+        const disabledCells = checkOutCalendarContainer.querySelectorAll('td.is-disabled');
+        if (disabledCells && disabledCells.length > 0) {
+            var lastDisabledCell = disabledCells[disabledCells.length - 1];
+            var firstEnabledCellAfterDisabled = lastDisabledCell.nextElementSibling;
+
+            if (firstEnabledCellAfterDisabled) {
+                firstEnabledCellAfterDisabled.classList.add('highlight-class');
+                console.log("The 'highlight-class' should be applied now.");
+            } else {
+                console.log("No enabled cell found after the last disabled cell.");
+            }
+
+            if (firstEnabledCellAfterDisabled && firstEnabledCellAfterDisabled.classList.contains('highlight-class')) {
+                console.log("The 'highlight-class' is present on the targeted cell.");
+            } else {
+                console.log("The 'highlight-class' is not present on the targeted cell.");
+            }
+        } else {
+            console.log("Couldn't find any disabled cells.");
+        }
+    }
+}
+
+
+
+
+// Output the Check out calendar result
+function updateCheckOutDate(date) {
+    const outputElement = document.getElementById('outputCheckOutDate');
+    if (outputElement) {
+        outputElement.textContent = date;
+    }
+}
+// Check out calendar function
+var checkOutPicker = new Pikaday({
+    field: document.getElementById('check-out-datepicker'),
+    bound: false,
+    minDate: new Date(),
+    container: document.getElementById('calendar-container-2'),
+    i18n: {  // Adding the i18n configuration
+        months        : ['January','February','March','April','May','June','July','August','September','October','November','December'],
+        weekdays      : ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'],
+        weekdaysShort : ['Su','Mo','Tu','We','Th','Fr','Sa']
+    },
+    
+    onClose: function() {
+        checkOutPicker.isVisible = true;
+    },
+    onSelect: function(date) {
+        var formattedDate = formatDateWithSuffix(date);
+        
+        // Get the label for next-section-4 and update its text
+        var label = document.querySelector('label[for="next-section-4"]');
+        if (label) {
+            label.textContent = formattedDate;
+
+             // Add the 'active-label' class and set the flag
+             label.classList.add('active-label');
+        calendarButtonClicked2 = true;    
+        }
+
+           // Update confirmation text
+    updateCheckOutDate(formattedDate);
+
+        // Store the formattedDate in the hidden input 'check_out_result'
+        document.getElementById('check_out_result').value = formattedDate;
+
+        // Apply the highlight class after selecting a date
+        applyHighlightClass();
+    }
+});
+
+// Add a click event listener to reapply the highlight class after Pikaday updates the DOM
+document.getElementById('checkout-cal').addEventListener('click', function() {
+    setTimeout(() => {
+        applyHighlightClass();
+    }, 0);
+});
+
+var selectedCheckInDate = null;  // Declare the variable outside the calendar instances
+
+
+
+
+
+
+// Show the calendar automatically 
+checkInPicker, checkOutPicker.show();
+
+// Take data from the calendar to populate the label 
+function formatDateWithSuffix(date) {
+    var day = date.getDate();
+    var month = date.getMonth();
+    var year = date.getFullYear();
+
+    // Helper function to get the day's ordinal suffix
+    function getOrdinalSuffix(num) {
+        if (num > 3 && num < 21) return 'th';
+        switch (num % 10) {
+            case 1:  return "st";
+            case 2:  return "nd";
+            case 3:  return "rd";
+            default: return "th";
+        }
+    }
+// Set custom month names
+    var monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    return day + getOrdinalSuffix(day) + ' ' + monthNames[month] + ' ' + year;
+}
+
+
+
+
+
+// Property type list 
+const radioButtons1 = document.querySelectorAll('.property-type-list input[type="radio"]');
+handleRadioButtons(radioButtons1, '#c5');
+
+// Bed / bath list
+const radioButtons2 = document.querySelectorAll('.bed-bath-list input[type="radio"]');
+handleRadioButtons(radioButtons2, '#c6');  // assuming the second label container's id is 'c6'
+
+// Priority list
+const radioButtons3 = document.querySelectorAll('.priority-list input[type="radio"]');
+handleRadioButtons(radioButtons3, '#c7');  // assuming the second label container's id is 'c6'
+
+// Currency list
+const radioButtons4 = document.querySelectorAll('.currency-list input[type="radio"]');
+handleRadioButtons(radioButtons4, '#c8');  // assuming the second label container's id is 'c6'
+
+// Cost list
+const radioButtons5 = document.querySelectorAll('.cost-list input[type="radio"]');
+handleRadioButtons(radioButtons5, '#c9');  // assuming the second label container's id is 'c6'
+
+
+
+
+// functionality for updating cost based on chosen currency
+document.querySelectorAll('input[name="currencyType"]').forEach(currencyRadio => {
+        currencyRadio.addEventListener('change', function() {
+            const chosenCurrency = this.value.split(" ")[0]; // Extract the symbol (e.g., £ or $ or €)
+
+            // Update the specific label
+            const labelToUpdate = document.querySelector('.currency-label');
+            labelToUpdate.textContent = `First Class ${chosenCurrency}1500+`;
+
+            const businessLabel = document.querySelector('label[for="option2-4"]');
+            businessLabel.textContent = `Business ${chosenCurrency}700+`;
+
+            const economyLabel = document.querySelector('label[for="option3-4"]');
+            economyLabel.textContent = `Economy ${chosenCurrency}500+`;
+        });
+    });
+
+
+
+// LABEL TEXT CHANGER
+function handleRadioButtons(radioButtons, labelContainerId, customMapping = null) {
+    radioButtons.forEach(radio => {
+        radio.addEventListener('change', function() {
+            let labelText;
+
+            if (customMapping && customMapping[this.value]) {
+                labelText = customMapping[this.value];
+            } else {
+                // Get the associated label's text for the selected radio button
+                labelText = document.querySelector('label[for="' + this.id + '"]').textContent;
+            }
+
+            // Check and ensure the element exists before updating
+            const targetElement = document.querySelector(labelContainerId + ' label');
+            if (targetElement) {
+                targetElement.textContent = labelText;
+            } else {
+                console.error(`Element not found for selector: ${labelContainerId + ' label'}`);
+            }
+        });
+    });
+}
+
+// Custom label names mappings based on radio input's value for different IDs
+const customMappings = {
+    '#priority-level': {
+        mapping: {
+            "Today": "Today",
+            "Within a week": "Within a week",
+            "This month": "This month"
+        },
+        labelContainerId: '#c7'
+    },
+    '#currency-type': {
+        mapping: {
+            "£ GBP": "£",
+            "$ USD": "$",
+            "€ EUR": "€"
+        },
+        labelContainerId: '#c8'  // modify accordingly
+    },
+    '#cost': {
+        mapping: {
+            "First Class (1500+)": "First Class",
+            "Business (700+)": "Business",
+            "Economy (250+)": "Economy"
+        },
+        labelContainerId: '#c9'  // modify accordingly
+    },
+    '#bed-bath': {
+        mapping: {
+            "1/1": "1 bed / 1 bath",
+            "1/2": "1 bed / 2 bath",
+            "2/1": "2 bed / 1 bath",
+            "2/2": "2 bed / 2 bath",
+            "3/2": "3 bed / 2 bath",
+            "3/3": "3 bed / 3 bath",
+            "4+/4+": "4+ bed / 4+ bath"
+        },
+        labelContainerId: '#c6'  // modify accordingly
+    },
+};
+
+// Using the customMappings to apply the handleRadioButtons function
+for (const [radioContainerId, info] of Object.entries(customMappings)) {
+    const radioButtons = document.querySelectorAll(radioContainerId + ' input[type="radio"]');
+    handleRadioButtons(radioButtons, info.labelContainerId, info.mapping);
+}
+
+
+// // LABEL TEXT CHANGER FOR MULTIPLE CHOICE
+let isUpdatingLabel = false;
+let selectionOrder = [];  // This array will keep track of checkboxes in the order they are selected
+
+// function handleCheckboxes(checkboxes, labelContainerId ) {
+//     checkboxes.forEach(checkbox => {
+//         checkbox.addEventListener('change', function() {
+//             if (isUpdatingLabel) return;  // If we're already updating, ignore further changes
+
+//             isUpdatingLabel = true;  // Set the flag to true
+
+//             // Get all the currently checked checkboxes
+//             const checkedBoxes = document.querySelectorAll('input[type="checkbox"]:checked');
+
+//             // If the current checkbox is checked, add it to the selectionOrder, otherwise remove it
+//             if (this.checked) {
+//                 selectionOrder.push(this.id);
+//             } else {
+//                 const index = selectionOrder.indexOf(this.id);
+//                 if (index > -1) {
+//                     selectionOrder.splice(index, 1);
+//                 }
+//             }
+
+//             // If there are no checked boxes, exit early
+//             if (checkedBoxes.length === 0) {
+//                 document.querySelector(labelContainerId).textContent = "Property type";
+//                 selectionOrder = []; // Reset since no items are checked
+//                 isUpdatingLabel = false;  // Reset the flag
+//                 return;
+//             }
+
+//             // Extract the associated label's text for the first checkbox in selectionOrder
+//             const firstCheckedLabel = document.querySelector('label[for="' + selectionOrder[0] + '"]').textContent;
+
+//             // Determine the label text based on the number of checked checkboxes
+//             const labelText = checkedBoxes.length > 1 ? firstCheckedLabel + " +" : firstCheckedLabel;
+
+//             // Adjust the label if it contains 'serviced apartment'
+//             const adjustedLabelText = labelText.replace("Serviced apartment", "Serviced apt.");
+
+//             // Update the label in the specified labelContainer with the adjusted text
+//             document.querySelector(labelContainerId).textContent = adjustedLabelText;
+
+           
+//             // // Update the label in the specified labelContainer
+//             // document.querySelector(labelContainerId).textContent = labelText;
+
+//             isUpdatingLabel = false;  // Reset the flag
+//         });
+//     });
+// }
+
+// Output the Check in calendar result
+function updateCheckInDate(date) {
+    const outputElement = document.getElementById('outputCheckInDate');
+    if (outputElement) {
+        outputElement.textContent = date;
+    }
+}
+function handleCheckboxes(checkboxes, labelContainerId, resultOutputId) {
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            if (isUpdatingLabel) return;
+
+            isUpdatingLabel = true;  // Set the flag to true
+
+            // Get all the currently checked checkboxes
+            const checkedBoxes = document.querySelectorAll('input[type="checkbox"]:checked');
+
+            // If the current checkbox is checked, add it to the selectionOrder, otherwise remove it
+            if (this.checked) {
+                selectionOrder.push(this.id);
+            } else {
+                const index = selectionOrder.indexOf(this.id);
+                if (index > -1) {
+                    selectionOrder.splice(index, 1);
+                }
+            }
+
+            // If there are no checked boxes, exit early
+            if (checkedBoxes.length === 0) {
+                document.querySelector(labelContainerId).textContent = "Property type";
+                selectionOrder = []; // Reset since no items are checked
+                isUpdatingLabel = false;  // Reset the flag
+                return;
+            }
+
+            // Extract the associated label's text for the first checkbox in selectionOrder
+            const firstCheckedLabel = document.querySelector('label[for="' + selectionOrder[0] + '"]').textContent;
+
+            // Determine the label text based on the number of checked checkboxes
+            const labelText = checkedBoxes.length > 1 ? firstCheckedLabel + " +" : firstCheckedLabel;
+
+            // Adjust the label if it contains 'serviced apartment'
+            const adjustedLabelText = labelText.replace("Serviced apartment", "Serviced apt.");
+
+            // Update the label in the specified labelContainer with the adjusted text
+            document.querySelector(labelContainerId).textContent = adjustedLabelText;
+
+             // Update another label/div elsewhere on the page with the adjusted text
+             document.getElementById(resultOutputId).textContent = adjustedLabelText;
+
+           
+            // // Update the label in the specified labelContainer
+            // document.querySelector(labelContainerId).textContent = labelText;
+
+            isUpdatingLabel = false;  // Reset the flag
+        });
+    });
+}
+
+// Label update function
+const checkboxes = document.querySelectorAll('input[name="propertyType"]');
+handleCheckboxes(checkboxes, '#c5 label');
+
+
+
+
+
+
+// CITY SELECTION
+// enter custom locations for each city
+const cityLocations = {
+    "London": ["Belgravia", "Camden", "Canary Wharf", "Chelsea", "City of London", "Covent Garden", "Farringdon", "Hampstead", "Holborn", "Hyde Park", "Kensington", "Kings Cross", "Knightsbridge", "Lancaster Gate", "Maida Vale", "Marylebone",  "Paddington", "Regents Park", "Soho",  "St Johns Wood",  "Swiss Cottage", "Westminster" ],
+    "Miami": ["Aventura" , "Bal Harbour " , "Bay Harbour Island " , "Bay Point" , "Belle Meade Island" , "Biscayne Island" ,  "Brickell" , "Coconut Grove" , "Coral Gables" , "Design District" ,  "Doral" , "Downtown Miami" , "Edgewater" , "Fisher Island" , "Hibiscus Island" ,  "Indian Creek Island" , "Kendall" , "Key Biscayne" , "La Gorce" , "Little Hati" , "Little Havana" , "Miami Beach" , "Midtown" , "Normandy Isles" , "Normandy Shores" , "Palmetto Bay" , "Palm Island" ,
+   "South Beach", "South Miami" ,"Star Island" ,"Sunny Isles Beach" ,"Sunset Island" ,"Surfside" ,"Upper East Side" ,"Venetian Island" ,"Wynwood"],
+    "New York": ["Chelsea" , "Chinatown" , "East Village" , "Financial District" , "Flatiron" , "Gramercy Park" , "Greenwich" , "Harlem" , "Little Italy" , "Lower East Side" , "Lower Manhattan" , "Meatpacking District" , "Midtown Manhattan" , "Midtown West" , "Soho" , "Tribeca" , "Upper East Side" , "Upper West Side" , "Washington Heights" , "West Village" ],
+    "Cote d'Azur": ["Antibes" , "Cannes" , "Cap-Ferrat" , "Eze" , "Frejus" , "Juan-les-Pins" , "Mandelieu-la-Napoule" , "Menton" , "Monaco" , "Nice" , "Provenance" , "Saint-Laurent-du-Var" , "Saint-Maxime" , "St-Paul-De-Vence" ,  "Saint-Raphael" , "Saint-Tropez"]
+    //... add more cities and locations as needed
+};
+
+
+// Functionality for individual locations for each city
+function updateLocationCheckboxes(city) {
+    const locationSelectDiv = document.querySelector('#location-select');
+    const locations = cityLocations[city] || [];
+    let content = '<div class="dropdown-toggle">Click to select...</div>';
+    
+    content += '<select id="multiSelect" size="4" multiple="multiple">';
+
+    locations.forEach((location, index) => {
+        content += `<option value="${location}">${location}</option>`;
+    });
+
+    content += '</select>';
+    locationSelectDiv.innerHTML = content;
+
+ // Initialize the dropdown behavior
+    initializeDropdown();
+}
+
+function initializeDropdown() {
+    const dropdownToggle = document.querySelector('.dropdown-toggle');
+    const selectElement = document.querySelector('#multiSelect');
+
+    dropdownToggle.addEventListener('click', function() {
+        if (selectElement.size === 1) {
+            selectElement.size = 4;
+        } else {
+            selectElement.size = 1;
+        }
+    });
+
+    selectElement.addEventListener('change', function(e) {
+        const selectedValues = Array.from(e.target.selectedOptions).map(opt => opt.text);
+        dropdownToggle.textContent = selectedValues.join(', ') || 'Click to select...';
+    });
+
+    // Handle multiple selection without holding CTRL on desktop
+    selectElement.addEventListener('mousedown', function(e) {
+        const clickedOption = e.target;
+        if (clickedOption.tagName === 'OPTION') {
+            e.preventDefault();
+            clickedOption.selected = !clickedOption.selected;
+            const event = new Event('change', {
+                'bubbles': true,
+                'cancelable': true
+            });
+            selectElement.dispatchEvent(event);
+        }
+    });
+}
+
+
+
+
+// // Register selected city 
+// let lastClickedCity = null;
+
+// document.addEventListener('click', function(event) {
+//     // Check if clicked element is a label and associated with our checkbox
+//     if (event.target.tagName.toLowerCase() === 'label' && event.target.getAttribute('for') === 'next-section-2') {
+//         lastClickedCity = event.target.getAttribute('data-city');
+//         console.log("Last clicked city:", lastClickedCity);
+
+//         // Change the body's background color
+//         const color = event.target.getAttribute('data-color');
+//         document.body.style.backgroundColor = color;
+        
+        
+//         // Set the name of the last clicked city to the label in c21
+//         const cityLabel = document.querySelector('#c21 label');
+//         if (cityLabel) {
+//             cityLabel.textContent = lastClickedCity;
+//         }
+        
+//         // Update the checkboxes based on the clicked city
+//         updateLocationCheckboxes(lastClickedCity);
+
+//           // Set the background color for the select menu
+//           const selectMenu = document.getElementById('multiSelect');
+//         if (selectMenu) {
+//             selectMenu.style.backgroundColor = color;
+//         }
+        
+        
+        
+//     }
+    
+// });
+
+// Output the Check out calendar result
+function updateCity() {
+    const outputElement = document.getElementById('outputCity');
+    if (outputElement) {
+        outputElement.textContent = lastClickedCity;
+    }
+}
+
+// Register selected city 
+let lastClickedCity = null;
+
+document.addEventListener('click', function(event) {
+    // Check if clicked element is a label and associated with our checkbox
+    if (event.target.tagName.toLowerCase() === 'label' && event.target.getAttribute('for') === 'next-section-2') {
+        lastClickedCity = event.target.getAttribute('data-city');
+        console.log("Last clicked city:", lastClickedCity);
+
+        // Change the body's background color
+        const color = event.target.getAttribute('data-color');
+        document.body.style.backgroundColor = color;
+        
+        // Remove the active-label class from all labels
+        document.querySelectorAll('label[data-city]').forEach((label) => {
+            label.classList.remove('active-label');
+        });
+
+        // Add the 'active-label' class to the clicked label
+        event.target.classList.add('active-label');
+        
+        // Set the name of the last clicked city to the label in c21
+        const cityLabel = document.querySelector('#c21 label');
+        if (cityLabel) {
+            cityLabel.textContent = lastClickedCity;
+        }
+        
+        // Update the checkboxes based on the clicked city
+        updateLocationCheckboxes(lastClickedCity);
+
+        // Set the background color for the select menu
+        const selectMenu = document.getElementById('multiSelect');
+        if (selectMenu) {
+            selectMenu.style.backgroundColor = color;
+        }
+        // Update the city name in the output element
+        updateCity();
+    }
+});
+
+
+
+
+
+// ASANA FUNCTIONALITY
+
+document.getElementById('asana-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const taskName = document.getElementById('task-name').value;
+    const checkInDate = document.getElementById('check_in_result').value;
+    const checkOutDate = document.getElementById('check_out_result').value;
+    const bedBath = document.querySelector('input[name="bedBath"]:checked');
+    const priorityLevel = document.querySelector('input[name="priorityLevel"]:checked');
+    const currencyType = document.querySelector('input[name="currencyType"]:checked');
+    const cost = document.querySelector('input[name="priceBand"]:checked');
+    const firstName = document.getElementById('first-name').value;
+    const workspaceID = '14453265907922'; // Replace with your workspace ID
+    const projectID = '1205203081414429'; // Replace with your project ID
+
+
+
+// radio button functionality
+let bedBathValue = "";  // Declare the variable outside the if statement
+if (bedBath) {
+    // Get the value of the selected radio button
+    bedBathValue = bedBath.value;
+}
+let priorityLevelValue = "";  // Declare the variable outside the if statement
+if (priorityLevel) {
+    // Get the value of the selected radio button
+    priorityLevelValue = priorityLevel.value;
+}
+
+let currencyTypeValue = "";  // Declare the variable outside the if statement
+if (currencyType) {
+    // Get the value of the selected radio button
+    currencyTypeValue = currencyType.value;
+}
+let costValue = "";  // Declare the variable outside the if statement
+if (cost) {
+    // Get the value of the selected radio button
+    costValue = cost.value;
+}
+let adultCountValue = currentAdultCount;  // Assign the count of adults
+let childrenCountValue = currentChildrenCount;  // Assign the count of children
+
+
+
+
+
+// TEXT FIELD FUNCTIONALITY
+const preferencesElement = document.getElementById('preferences');
+const titleElement = document.getElementById('title');
+const firstNameElement = document.getElementById('first-name');
+const taskNameElement = document.getElementById('task-name');
+const emailAddressElement = document.getElementById('email-address');
+
+let preferencesValue = preferencesElement ? preferencesElement.value : "";
+let titleValue = titleElement ? titleElement.value : "";
+let firstNameValue = firstNameElement ? firstNameElement.value : "";
+let taskNameValue = taskNameElement ? taskNameElement.value : "";
+let emailAddressValue = emailAddressElement ? emailAddressElement.value : "";
+
+
+
+
+// PROPERTY TYPE FUNCTIONALITY 
+// Select all checked checkboxes with the name "propertyType"
+const propertyChoices = document.querySelectorAll('input[name="propertyType"]:checked');
+
+// Initialize an empty array to store the values of selected checkboxes
+const selectedPropertyTypes = [];
+
+// Loop through each checked checkbox
+propertyChoices.forEach(choice => {
+    // Add the value of the checkbox to the selectedPropertyTypes array
+    selectedPropertyTypes.push(choice.value);
+});
+
+
+
+
+// Convert the selected property types into a single string
+const propertyTypeString = selectedPropertyTypes.join(', ');
+
+
+      // Asana API endpoint to create a task in a specific workspace and project
+      const asanaAPIEndpoint = `https://app.asana.com/api/1.0/tasks?workspace=${workspaceID}&projects=${projectID}`;
+
+      // Asana API request headers
+      const headers = {
+        'Authorization': 'Bearer 1/1202468993651075:63bbc851d455bbc3b468fcf4ffc24ee6',
+        'Content-Type': 'application/json',
+      };
+
+     
+// Add a prefix to the task name in Asana
+const prefixText = "SHORT STAY: "; 
+
+// Asana task data
+const taskData = {
+    'data': {
+      'name': prefixText + taskName,
+      'notes': `City: ${lastClickedCity}\nAdults: ${currentAdultCount}\nChildren: ${currentChildrenCount}\nProperty types: ${propertyTypeString}\nCheck-in date: ${checkInDate}\nCheck-out date: ${checkOutDate}\nBedroom / bathroom ratio: ${bedBathValue}\nPriority level: ${priorityLevelValue}\nCurrency: ${currencyTypeValue}\nPrice band: ${costValue}\nTitle:${titleValue}\nFirst name: ${firstNameValue}\nSurname: ${taskNameValue}\nEmail: ${emailAddressValue}\nPreferences: ${preferencesValue}`,
+    },
+};
+
+
+
+
+      // Make a POST request to create the task
+      fetch(asanaAPIEndpoint, {
+        method: 'POST',
+        headers: headers,
+        body: JSON.stringify(taskData),
+      })
+      .then(response => response.json())
+      .then(data => {
+        // Handle the response from Asana here
+        console.log('Task created successfully:', data);
+      })
+      .catch(error => {
+        // Handle errors here
+        console.error('Error creating task:', error);
+      });
+  
+  });
+
+
+
+
+//  COSMETIC EFFECTS PT 2
+// const labelForCheckbox = document.querySelector('label[for="yourCheckboxId"]'); // Replace 'yourCheckboxId' with the actual id
+// const increaseButton = document.getElementById('increaseButton');
+// const decreaseButton = document.getElementById('decreaseButton');
+// let buttonClicked = false;  // Flag to track if the buttons have been clicked
+
+// // I'm assuming currentAdultCount exists and gets updated in your code
+// let adultCountValue = currentAdultCount; 
+
+// increaseButton.addEventListener('click', function() {
+//     buttonClicked = true;
+//     labelForCheckbox.classList.add('active-label'); // Add the class to the label
+// });
+
+// decreaseButton.addEventListener('click', function() {
+//     // Only set buttonClicked to true and add the class if adultCountValue is above 0 after decrement
+//     adultCountValue--; // Decrease the value
+//     if(adultCountValue > 0) {
+//         buttonClicked = true;
+//         labelForCheckbox.classList.add('active-label');
+//     }
+// });
+
+// // If this label is clicked, add the class
+// labelForCheckbox.addEventListener('click', function() {
+//     labelForCheckbox.classList.add('active-label'); 
+// });
+
+// // If any other label is clicked, check the buttonClicked flag and remove the class if necessary
+// const allLabels = document.querySelectorAll('label');
+// allLabels.forEach(function(label) {
+//     if (label !== labelForCheckbox) {
+//         label.addEventListener('click', function() {
+//             if (!buttonClicked) {
+//                 labelForCheckbox.classList.remove('active-label');
+//             }
+//         });
+//     }
+// });
+
+// function updateAdultLabelClass() {
+//     const adultCountLabel = document.querySelector('label[for="next-section-22"]');
+
+//     if (currentAdultCount === 0 && currentIndex === 1) {
+//         adultCountLabel.classList.remove('active-label');
+//     } 
+// }
+
+
+
+
+function updateActiveLabelStatus() {
+    const labelForCurrentIndex = document.querySelector(`label[for="${indexLabelMapping[currentIndex]}"]`);
+    
+    // Check for any inputs being filled, buttons being clicked, or calendars being activated.
+    // This is a simplification for brevity; you can expand upon this based on your real-world requirements.
+    const shouldRetainActiveClass = 
+        buttonClicked || 
+        calendarButtonClicked || 
+        calendarButtonClicked2 ||
+        Array.from(document.querySelectorAll('input[type="checkbox"]')).some(cb => cb.checked);
+
+    if (shouldRetainActiveClass) {
+        labelForCurrentIndex.classList.add('active-label');
+    } else {
+        labelForCurrentIndex.classList.remove('active-label');
+    }
+}
+
+
+
+// EXTRACT VALUES FOR CONFIRMATION PAGE
+document.addEventListener('DOMContentLoaded', () => {
+    // Variable to hold the bedBathValue
+    // let bedBathValue = "";
+
+    // Function to update bed/bath preview
+    const updateBedBathPreview = () => {
+        document.getElementById('outputBedBath').innerText = bedBathValue;
+    }
+
+// Function to update check in preview
+    function printCheckInDate(dateText) {
+    document.getElementById('outputCheckInDate').innerText = dateText;
+}
+// Function to update check out preview
+function printCheckOutDate(dateText) {
+    document.getElementById('outputCheckOutDate').innerText = dateText;
+}
+   
+    
+    // Event Listener for Radio Buttons
+    const radioButtons = document.querySelectorAll('input[name="bedBath"]');
+    radioButtons.forEach(radio => {
+        radio.addEventListener('change', function() {
+            if (this.checked) {
+                bedBathValue = this.value;
+                updateBedBathPreview();
+            }
+        });
+    });
+});
+
+
+
+</script>
+
+
+
