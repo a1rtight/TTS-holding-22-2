@@ -99,7 +99,7 @@
                 </div>
 
 
-                <div class="mobile-col" id="c21"><label for="next-section-21">Locations</label></div>
+                <div class="mobile-col" id="c21"><label for="next-section-21">City</label></div>
 
                 <div class="mobile-col" id="c22"><label for="next-section-22"><span id="adultCount">0
                             Adults</span></label></div>
@@ -109,7 +109,7 @@
 
                 <div class="mobile-col" id="c3"><label for="next-section-3">Check in</label></div>
                 <div class="mobile-col" id="c4"><label for="next-section-4">Check out</label></div>
-                <div class="mobile-col" id="c5"><label for="next-section-5">Property type(s)</label></div>
+                <div class="mobile-col" id="c5"><label for="next-section-5">Property type</label></div>
                 <div class="mobile-col" id="c6"><label for="next-section-6">Bed / bathrooms</label></div>
                 <div class="mobile-col" id="c7"><label for="next-section-7">Priority</label></div>
                 <div class="mobile-col" id="c8"><label for="next-section-8">Currency</label></div>
@@ -129,9 +129,7 @@
                     <!-- Supporting div content goes here -->
 
                     <!-- Location select -->
-                    <div id="location-select" class="hidden section-content">
-                        <div class="locationsLabel" id="locationsLabel">First select a city</div>
-                    </div>
+                    <div id="location-select" class="hidden section-content"></div>
 
                     <!-- Adults -->
                     <div id="adult-guests" class="hidden section-content">
@@ -218,31 +216,31 @@
                         <ul class="radio-list bed-bath-list">
                             <li>
                                 <input type="radio" id="option1-1" name="bedBath" value="1/1">
-                                <label for="option1-1">1 bed, 1 bathroom</label>
+                                <label for="option1-1">1 bed / 1 bathroom</label>
                             </li>
                             <li>
                                 <input type="radio" id="option21" name="bedBath" value="1/2">
-                                <label for="option21">1 bed, 2 bathrooms</label>
+                                <label for="option21">1 bed / 2 bathrooms</label>
                             </li>
                             <li>
                                 <input type="radio" id="option3-1" name="bedBath" value="2/1">
-                                <label for="option3-1">2 bed, 1 bathroom</label>
+                                <label for="option3-1">2 bed / 1 bathroom</label>
                             </li>
                             <li>
                                 <input type="radio" id="option4-1" name="bedBath" value="2/2">
-                                <label for="option4-1">2 bed, 2 bathrooms</label>
+                                <label for="option4-1">2 bed / 2 bathrooms</label>
                             </li>
                             <li>
                                 <input type="radio" id="option5-1" name="bedBath" value="3/2">
-                                <label for="option5-1">3 bed, 2 bathrooms</label>
+                                <label for="option5-1">3 bed / 2 bathrooms</label>
                             </li>
                             <li>
                                 <input type="radio" id="option6-1" name="bedBath" value="3/3">
-                                <label for="option6-1">3 bed, 3 bathrooms</label>
+                                <label for="option6-1">3 bed / 3 bathrooms</label>
                             </li>
                             <li>
                                 <input type="radio" id="option7-1" name="bedBath" value="4+/4+">
-                                <label for="option7-1">4+ bed, 4+ bathrooms</label>
+                                <label for="option7-1">4+ bed / 4+ bathrooms</label>
                             </li>
                         </ul>
                     </div>
@@ -345,7 +343,7 @@
                         </div>
                         <p id="outputPriorityLevel" class="placeholder">Priority</p>
                         <p id="outputEmailAddress" class="placeholder"></p>
-                        <input type="submit" class="create-task" value="Submit &#8594">
+                        <input type="submit" value="Create Task">
                     </div>
 
 
@@ -364,11 +362,6 @@
     // COSMETIC EFFECTS
 
     // let persistentActiveLabels = new Set();
-
-
-// Bits to make the location label behave
-    let selectedValues = [];
-    let hasSelection = false; // This will track if any selection has been made
 
 
 
@@ -394,8 +387,6 @@
             labelForCheckbox.classList.remove('active-label');
         }
 
-        
-
         // Check for calendar button click
         if (calendarButtonClicked) {
             labelForCheckbox.classList.add('active-label');
@@ -410,8 +401,6 @@
             labelForCheckbox.classList.remove('active-label');
         }
 
-
-
         // Check for checkboxes being selected
         const checkboxes = document.querySelectorAll('input[type="checkbox"]');
         checkboxes.forEach(cb => {
@@ -422,8 +411,6 @@
                 label.classList.remove('active-label');
             }
         });
-   
-        
     }
 
     let labelForCheckbox; // Define it in the global scope
@@ -590,8 +577,6 @@
     handleLabelActivationWithCheckboxes('next-section-7', 'priorityLevel');
     handleLabelActivationWithCheckboxes('next-section-8', 'currencyType');
     handleLabelActivationWithCheckboxes('next-section-9', 'priceBand');
-    handleLabelActivationWithCheckboxes('next-section-10', 'preferences-box');
-    handleLabelActivationWithCheckboxes('next-section-11', 'details');
 
 
     // STYLE LABELS ON CONFIRMATION PAGE
@@ -684,16 +669,6 @@
         mobileCols.forEach(function (col) {
             col.style.transform = `translateX(${transformValue}%)`;
         });
-        
-            // Check if the current index is for 'c21' and apply the class to the label for next-section-21
-    // const labelForNextSection21 = document.querySelector('label[for="next-section-21"]');
-    // if (currentIndex === 1) {
-    //     labelForNextSection21.classList.add('active-label');
-    // } else {
-    //     labelForNextSection21.classList.remove('active-label');
-    // }
-    
-
     }
 
     // Debugging – check indexing stage in console
@@ -743,31 +718,13 @@
 
                 }
 
-
-                
                 // DISPLAY LOCATION SELECT
                 console.log("After decrement - Current Index:", currentIndex); // Debugging line
                 if (currentIndex === 1) {
-                    locationSelect.classList.remove('hidden');
-                     // Show checkin-cal on section 3
+                    locationSelect.classList.remove('hidden'); // Show checkin-cal on section 3
                 } else {
                     locationSelect.classList.add('hidden'); // Hide checkin-cal on other sections
                 }
-
-                // Target the locations label via index since it never gets clicked
-                function updateCityLabelClassBasedOnIndex(currentIndex) {
-    const cityLabel = document.querySelector('#c21 label');
-    if (currentIndex === 1) {
-        cityLabel?.classList.add('active-label');
-    } else if (currentIndex !== 1 && cityLabel?.textContent.trim() === 'Locations') {
-        cityLabel.classList.remove('active-label');
-    }
-}
-
-// Make sure to call this function whenever currentIndex changes
-updateCityLabelClassBasedOnIndex(currentIndex);
-
-
                 // DISPLAY ADULT GUESTS
                 console.log("After decrement - Current Index:", currentIndex); // Debugging line
                 // if (currentIndex === 2) {
@@ -902,285 +859,26 @@ updateCityLabelClassBasedOnIndex(currentIndex);
         });
     });
 
-    // // Back button functionality
-    // document.getElementById('back-section').addEventListener('change', function () {
-    //     if (this.checked) {
-    //         console.log("Before decrement - Current Index:", currentIndex); // Debugging line
-    //         if (currentIndex > 0) {
-    //             currentIndex--;
-    //             moveSlider();
-    //             console.log("After decrement - Current Index:", currentIndex); // Debugging line
+    // Back button functionality
+    document.getElementById('back-section').addEventListener('change', function () {
+        if (this.checked) {
+            console.log("Before decrement - Current Index:", currentIndex); // Debugging line
+            if (currentIndex > 0) {
+                currentIndex--;
+                moveSlider();
+                console.log("After decrement - Current Index:", currentIndex); // Debugging line
 
-    //             // SELECTED CLASS FUNCTIONALITY FOR BACK BUTTON
-    //             // Check the adultCount and remove the class if it's 0
-    //             const adultCountLabel = document.querySelector('label[for="next-section-22"]');
-    //             if (currentAdultCount === 0) {
-    //                 adultCountLabel.classList.remove('active-label');
-    //             }
-    //             // Check the childrenCount and remove the class if it's 0
-    //             const childrenCountLabel = document.querySelector('label[for="next-section-23"]');
-    //             if (currentChildrenCount === 0) {
-    //                 childrenCountLabel.classList.remove('active-label');
-    //             }
-
-    //             // DISPLAY LOCATION SELECT
-    //             if (currentIndex === 1) {
-    //                 locationSelect.classList.remove('hidden'); // Remove hidden class for index 1 
-    //             } else {
-    //                 locationSelect.classList.add('hidden'); // Hide checkin-cal for other indexes
-    //             }
-    //             // DISPLAY ADULT GUESTS
-    //             if (currentIndex === 2) {
-    //                 adultGuests.classList.remove('hidden'); // Remove hidden class for index 1 
-    //             } else {
-    //                 adultGuests.classList.add('hidden'); // Hide checkin-cal for other indexes
-    //             }
-
-
-    //             // DISPLAY LCHILD GUESTS
-    //             if (currentIndex === 3) {
-    //                 childGuests.classList.remove('hidden'); // Remove hidden class for index 1 
-    //             } else {
-    //                 childGuests.classList.add('hidden'); // Hide checkin-cal for other indexes
-    //             }
-
-    //             // DISPLAY CALENDAR FOR CHECK IN
-    //             if (currentIndex === 4) {
-    //                 checkinCal.classList.remove('hidden'); // Remove hidden class for index 1 
-    //             } else {
-    //                 checkinCal.classList.add('hidden'); // Hide checkin-cal for other indexes
-    //             }
-
-    //             // DISPLAY CALENDAR FOR CHECK OUT
-    //             if (currentIndex === 5) {
-    //                 checkoutCal.classList.remove('hidden'); // Remove hidden class for index 2
-    //             } else {
-    //                 checkoutCal.classList.add('hidden'); // Hide checkin-cal for other indexes
-    //             }
-
-    //             // DISPLAY PROPERTY TYPE
-    //             if (currentIndex === 6) {
-    //                 propertyType.classList.remove('hidden'); // Remove hidden class for index 2
-    //             } else {
-    //                 propertyType.classList.add('hidden'); // Hide checkin-cal for other indexes
-    //             }
-
-    //             // DISPLAY BED / BATHROOMS
-    //             if (currentIndex === 7) {
-    //                 bedBath.classList.remove('hidden'); // Remove hidden class for index 2
-    //             } else {
-    //                 bedBath.classList.add('hidden'); // Hide checkin-cal for other indexes
-    //             }
-
-    //             // DISPLAY PRIORITY 
-    //             if (currentIndex === 8) {
-    //                 priority.classList.remove('hidden'); // Remove hidden class for index 2
-    //             } else {
-    //                 priority.classList.add('hidden'); // Hide checkin-cal for other indexes
-    //             }
-
-    //             // DISPLAY CURRENCY 
-    //             if (currentIndex === 9) {
-    //                 currency.classList.remove('hidden'); // Remove hidden class for index 2
-    //             } else {
-    //                 currency.classList.add('hidden'); // Hide checkin-cal for other indexes
-    //             }
-
-    //             // DISPLAY COST
-    //             if (currentIndex === 10) {
-    //                 cost.classList.remove('hidden'); // Remove hidden class for index 2
-    //             } else {
-    //                 cost.classList.add('hidden'); // Hide checkin-cal for other indexes
-    //             }
-
-    //             // DISPLAY PREFERENCES
-    //             if (currentIndex === 11) {
-    //                 preferencesBox.classList.remove('hidden');
-    //             } else {
-    //                 preferencesBox.classList.add('hidden');
-    //             }
-
-    //             // DISPLAY DETAILS
-    //             if (currentIndex === 12) {
-    //                 details.classList.remove('hidden');
-    //             } else {
-    //                 details.classList.add('hidden');
-    //             }
-
-    //             // DISPLAY CONFIRMATION
-    //             if (currentIndex === 13) {
-    //                 confirmation.classList.remove('hidden');
-    //             } else {
-    //                 confirmation.classList.add('hidden');
-    //             }
-    //             // Change page height
-    //             if (currentIndex < 13) {
-    //                 document.getElementById('mobile-overlay').classList.remove('long-card');
-    //             }
-
-
-    //         }
-
-    //         this.checked = false;
-    //     }
-    // });
-
-    // NEW BACK / SWIPE FUNCTIONALITY FOR ACTIVE LABELS
-
-
-    // Function to check the preferences input and adjust the class accordingly
-// function handlePreferencesInput() {
-//     const preferencesInput = document.getElementById('preferences');
-//     const preferencesLabel = document.querySelector('label[for="next-section-10"]');
-
-//     // Only remove the 'active-label' class if the input is empty
-//     if (preferencesInput && preferencesInput.value.trim() === '') {
-//         preferencesLabel.classList.remove('active-label');
-//     }
-//     // If there's content, the 'active-label' remains, so no else block is needed here.
-// }
-
-// Styling details label checking all fields are filled 
-function areAllDetailsFieldsFilled() {
-    var title = document.getElementById('title');
-    var firstName = document.getElementById('first-name');
-    var surname = document.getElementById('task-name'); // Note: Confirm the correct ID for the surname field.
-    var emailAddress = document.getElementById('email-address');
-
-    // Check if all fields are non-empty and return the appropriate boolean.
-    return title.value.trim() !== '' &&
-        firstName.value.trim() !== '' &&
-        surname.value.trim() !== '' &&
-        emailAddress.value.trim() !== '';
-}
-
-
-function isPreferencesFilled() {
-    var preferencesInput = document.getElementById('preferences');
-
-    // Check if the field is non-empty and return the appropriate boolean.
-    return preferencesInput && preferencesInput.value.trim() !== '';
-}
-
-
-
-    // First, we define the goBack function which encapsulates all the logic needed when going back.
-function goBack() {
-    console.log("Before decrement - Current Index:", currentIndex); // Debugging line
-    if (currentIndex > 0) {
-        currentIndex--;
-
-        
-        // ... (all your existing logic for handling what happens when you go back)
-        // For instance, updating UI elements, changing states, etc.
-    // Immediately reflect the state of checkboxes in labels
-    updateCheckboxLabels();
-  // ADD TEXT INPUT CONDITIONS !
-//   handlePreferencesInput();
-
-
-// Your condition here without checking currentIndex
-
-            // const cityLabel = document.querySelector('#c21 label');
-    // if (cityLabel) {
-    //     // Check if the active class should be updated for the `#c21` label
-    //     if (currentIndex === 1) {
-    //         cityLabel.classList.add('active-label');
-    //     } else if (currentIndex !== 1 && cityLabel.textContent.trim() === 'Locations') {
-    //         cityLabel.classList.remove('active-label');
-    //     }
-    // }
-
-    // Functionality for the locations label
-    // const cityLabel = document.querySelector('#c21 label');
-    //     if (cityLabel && (selectedValues.length === 0 || cityLabel.textContent.trim() === 'Locations')) {
-    //         cityLabel.classList.remove('active-label');
-        
-    // } 
-
-    const cityLabel = document.querySelector('#c21 label');
-    const locationsLabel = document.querySelector('.locationsLabel'); // Update this if needed
-
-    // If hasSelection is true, keep the active-label class on cityLabel
-    if (cityLabel && hasSelection) {
-        cityLabel.classList.add('active-label');
-    } else if (cityLabel) {
-        cityLabel.classList.remove('active-label');
-    }
-
-    // If hasSelection is true, keep the active-label class on locationsLabel
-    if (locationsLabel && hasSelection) {
-        locationsLabel.classList.add('active-label');
-    } else if (locationsLabel) {
-        locationsLabel.classList.remove('active-label');
-    }
-
-        // SELECTED CLASS FUNCTIONALITY FOR BACK BUTTON
-        // Check the adultCount and remove the class if it's 0
-        const adultCountLabel = document.querySelector('label[for="next-section-22"]');
-        if (currentAdultCount === 0) {
-            adultCountLabel.classList.remove('active-label');
-        }
-        // Check the childrenCount and remove the class if it's 0
-        const childrenCountLabel = document.querySelector('label[for="next-section-23"]');
-        if (currentChildrenCount === 0) {
-            childrenCountLabel.classList.remove('active-label');
-        }
-
-    
-        const calendarLabel1 = document.querySelector('label[for="next-section-3"]'); // change the selector to your actual label
-        const calendarLabel2 = document.querySelector('label[for="next-section-4"]'); // change the selector to your actual label
-        
-        var detailsLabel = document.querySelector('label[for="next-section-11"]');
-        var preferencesLabel = document.querySelector('label[for="next-section-10"]'); // change the selector to your actual label
-  
-
-        // Check for calendar button click
-        if (calendarButtonClicked) {
-            calendarLabel1.classList.add('active-label');
-        } else {
-            calendarLabel1.classList.remove('active-label');
-        }
-
-        // Check for calendar button click (2nd instance)
-        if (calendarButtonClicked2) {
-            calendarLabel2.classList.add('active-label');
-        } else {
-            calendarLabel2.classList.remove('active-label');
-        }
-
-        // // Check for text input in preferences
-        // let preferencesInput = document.getElementById('preferences');
-        // if (preferencesInput && preferencesInput.value.trim() === '') {
-        //     document.querySelector('label[for="next-section-10"]').classList.remove('active-label');
-        // } // No else part here, as we don't want to re-add the class if text is present when going back.
-
- // Reference to your label that needs the active class toggled
-
-
-// Now, we check if the preferences input is filled and update the label class accordingly.
-if (isPreferencesFilled()) {
-    // If the field is filled, we ensure the label appears active.
-    preferencesLabel.classList.add('active-label');
-} else {
-    // If the field is empty, we remove the 'active' indication as the user is going back to presumably change or complete something.
-    preferencesLabel.classList.remove('active-label');
-}
-
-        if (areAllDetailsFieldsFilled()) {
-        // If all fields are filled, we ensure the label appears active (e.g., perhaps it's highlighted).
-        detailsLabel.classList.add('active-label');
-    } else {
-        // If not all fields are filled, we remove the 'active' indication as the user is going back to presumably change or complete something.
-        detailsLabel.classList.remove('active-label');
-    }
-
-  
-
-
-       
-
-
+                // SELECTED CLASS FUNCTIONALITY FOR BACK BUTTON
+                // Check the adultCount and remove the class if it's 0
+                const adultCountLabel = document.querySelector('label[for="next-section-22"]');
+                if (currentAdultCount === 0) {
+                    adultCountLabel.classList.remove('active-label');
+                }
+                // Check the childrenCount and remove the class if it's 0
+                const childrenCountLabel = document.querySelector('label[for="next-section-23"]');
+                if (currentChildrenCount === 0) {
+                    childrenCountLabel.classList.remove('active-label');
+                }
 
                 // DISPLAY LOCATION SELECT
                 if (currentIndex === 1) {
@@ -1277,60 +975,12 @@ if (isPreferencesFilled()) {
                     document.getElementById('mobile-overlay').classList.remove('long-card');
                 }
 
-        moveSlider(); // This function is called after the currentIndex has been updated.
-        console.log("After decrement - Current Index:", currentIndex); // Debugging line
-    }
-}
 
-// New function that checks the state of checkboxes and updates label classes
-function updateCheckboxLabels() {
-    // List all sections with checkboxes
-    const sectionsWithCheckboxes = [
-        { labelId: 'next-section-5', checkboxName: 'propertyType' },
-        { labelId: 'next-section-6', checkboxName: 'bedBath' },
-        { labelId: 'next-section-7', checkboxName: 'priorityLevel' },
-        { labelId: 'next-section-8', checkboxName: 'currencyType' },
-        { labelId: 'next-section-9', checkboxName: 'priceBand' },
-        // ... all other relevant sections ...
-    ];
+            }
 
-    // Check each section and update label classes based on whether any checkbox is checked
-    sectionsWithCheckboxes.forEach(({ labelId, checkboxName }) => {
-        const label = document.querySelector(`label[for="${labelId}"]`);
-        const checkboxes = document.querySelectorAll(`input[name="${checkboxName}"]`);
-        const isAnyChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
-
-        if (isAnyChecked) {
-            label.classList.add('active-label');
-        } else {
-            label.classList.remove('active-label');
+            this.checked = false;
         }
     });
-}
-
-// Call this function when the page loads to set up your checkbox interactions
-function initializeCheckboxListeners() {
-    handleLabelActivationWithCheckboxes('next-section-5', 'propertyType');
-    // ... and all other sections ...
-}
-
-
-
-
-// Back button functionality
-document.getElementById('back-section').addEventListener('change', function () {
-    if (this.checked) {
-        goBack(); // Here, we simply call the new function.
-        this.checked = false; // Reset the state of the checkbox.
-    }
-});
-
-// Now, you can also call goBack() from any other part of your script where you need the same functionality,
-// e.g., when detecting a swipe gesture that indicates "going back".
-
-
-
-
 
 
     // SWIPE FUNCTIONALITY FOR SLIDER
@@ -1395,7 +1045,6 @@ document.getElementById('back-section').addEventListener('change', function () {
     // Mapping between currentIndex and label IDs
     let indexLabelMapping = {
 
-        1: 'next-section-21',
         2: 'next-section-22',
         3: 'next-section-23',
         4: 'next-section-3',
@@ -1420,104 +1069,39 @@ document.getElementById('back-section').addEventListener('change', function () {
         moved = true;
     }, false);
 
-//     document.addEventListener('touchend', function (e) {
-//     if (!moved) return;
+    document.addEventListener('touchend', function (e) {
+        if (!moved) return;
 
-//     let endX = e.changedTouches[0].clientX;
-//     let threshold = 50;
+        let endX = e.changedTouches[0].clientX;
+        let threshold = 50;
 
-//     if (startX - endX > threshold) {
-//         // Swiped left
-//         if (currentIndex < slides.length - 1) {
-//             currentIndex++;
-//             moveSlider();
-//             updateSectionVisibility();
-//         }
-//     } else if (endX - startX > threshold) {
-//         // Swiped right
-//         goBack(); // Call the same function as the back button.
-//     }
-
-//     // ... rest of your existing code ...
-
-//     // Make sure that you're also calling updateLabels or a similar function here 
-//     // to ensure label status is updated on swipe as well.
-//     updateLabels(currentIndex);
-
-// }, false);
-document.addEventListener('touchend', function (e) {
-    if (!moved) return;
-
-    let endX = e.changedTouches[0].clientX;
-    let threshold = 50;
-
-    if (startX - endX > threshold) {
-        // Swiped left (forward)
-        if (currentIndex < slides.length - 1) {
-            currentIndex++;
-            moveSlider();
-            updateSectionVisibility();
-
-            // New logic for adding 'active-label' starts here
-            const labelID = indexLabelMapping[currentIndex]; // Get the label ID for the current index
-            if (labelID) {
-                const currentLabel = document.querySelector(`label[for="${labelID}"]`);
-                if (currentLabel) {
-                    currentLabel.classList.add('active-label'); // Add 'active-label' class
-                }
+        if (startX - endX > threshold) {
+            if (currentIndex < slides.length - 1) {
+                currentIndex++;
+                moveSlider();
+                updateSectionVisibility();
             }
-            // New logic ends here
+        } else if (endX - startX > threshold) {
+            if (currentIndex > 0) {
+                currentIndex--;
+                moveSlider();
+                updateSectionVisibility();
+            }
         }
+        // ADDS LABEL STYLING ON SWIPE
+        // Get the label ID based on the currentIndex
+        const currentLabelId = indexLabelMapping[currentIndex];
 
-        
-    } else if (endX - startX > threshold) {
-        // Swiped right (back)
+        // Remove active-label from all labels
+        Object.values(indexLabelMapping).forEach(id => {
+            const label = document.querySelector(`label[for="${id}"]`);
+            if (label) label.classList.remove('active-label');
+        });
 
-        
-        goBack(); // Call the goBack function as before
-        
-        
-        
-    }
-    // Additional logic for the `#c21` label
-    // const cityLabel = document.querySelector('#c21 label');
-    // if (cityLabel) {
-    //     // Check if the active class should be updated for the `#c21` label
-    //     if (currentIndex === 1) {
-    //         cityLabel.classList.add('active-label');
-    //     } else if (currentIndex !== 1 && cityLabel.textContent.trim() === 'Locations') {
-    //         cityLabel.classList.remove('active-label');
-    //     }
-    // }
-
-
-    // If you have additional logic for updating labels, it should still be called here.
-    updateLabels(currentIndex);
-
-}, false);
-
-
-
-// This 'updateLabels' function should mimic whatever logic is applied 
-// when the labels are updated during button-based navigation.
-// It checks the appropriate conditions and applies 'active-label' accordingly.
-function updateLabels(index) {
-    // Logic that applies 'active-label' based on specific conditions
-    // ...
-
-    // switch (index) {
-    //     case 2: // if 2 is the index for the adult section
-    //         // Here, you should ensure the 'active-label' class is applied
-    //         // before calling the function that checks whether to keep or remove it.
-    //         const labelForCheckbox = document.querySelector('label[for="next-section-22"]');
-    //         if (labelForCheckbox) {
-    //             labelForCheckbox.classList.add('active-label'); // ensure the class is applied
-    //             updateAdultLabel(); // now let the conditions check run
-    //         }
-    //         break;
-    //     // ... other cases
-    // }
-}
+        // Now, add active-label to the label based on currentIndex
+        const targetLabel = document.querySelector(`label[for="${currentLabelId}"]`);
+        if (targetLabel) targetLabel.classList.add('active-label');
+    }, false);
 
 
 
@@ -2021,6 +1605,56 @@ function updateLabels(index) {
     let isUpdatingLabel = false;
     let selectionOrder = [];  // This array will keep track of checkboxes in the order they are selected
 
+    // function handleCheckboxes(checkboxes, labelContainerId ) {
+    //     checkboxes.forEach(checkbox => {
+    //         checkbox.addEventListener('change', function() {
+    //             if (isUpdatingLabel) return;  // If we're already updating, ignore further changes
+
+    //             isUpdatingLabel = true;  // Set the flag to true
+
+    //             // Get all the currently checked checkboxes
+    //             const checkedBoxes = document.querySelectorAll('input[type="checkbox"]:checked');
+
+    //             // If the current checkbox is checked, add it to the selectionOrder, otherwise remove it
+    //             if (this.checked) {
+    //                 selectionOrder.push(this.id);
+    //             } else {
+    //                 const index = selectionOrder.indexOf(this.id);
+    //                 if (index > -1) {
+    //                     selectionOrder.splice(index, 1);
+    //                 }
+    //             }
+
+    //             // If there are no checked boxes, exit early
+    //             if (checkedBoxes.length === 0) {
+    //                 document.querySelector(labelContainerId).textContent = "Property type";
+    //                 selectionOrder = []; // Reset since no items are checked
+    //                 isUpdatingLabel = false;  // Reset the flag
+    //                 return;
+    //             }
+
+    //             // Extract the associated label's text for the first checkbox in selectionOrder
+    //             const firstCheckedLabel = document.querySelector('label[for="' + selectionOrder[0] + '"]').textContent;
+
+    //             // Determine the label text based on the number of checked checkboxes
+    //             const labelText = checkedBoxes.length > 1 ? firstCheckedLabel + " +" : firstCheckedLabel;
+
+    //             // Adjust the label if it contains 'serviced apartment'
+    //             const adjustedLabelText = labelText.replace("Serviced apartment", "Serviced apt.");
+
+    //             // Update the label in the specified labelContainer with the adjusted text
+    //             document.querySelector(labelContainerId).textContent = adjustedLabelText;
+
+
+    //             // // Update the label in the specified labelContainer
+    //             // document.querySelector(labelContainerId).textContent = labelText;
+
+    //             isUpdatingLabel = false;  // Reset the flag
+    //         });
+    //     });
+    // }
+
+
     function handleCheckboxes(checkboxes, labelContainerId, resultOutputId) {
         checkboxes.forEach(checkbox => {
             checkbox.addEventListener('change', function () {
@@ -2082,348 +1716,106 @@ function updateLabels(index) {
 
 
 
-        // CITY SELECTION
-        // enter custom locations for each city
-        const cityLocations = {
-            "London": ["Belgravia", "Camden", "Canary Wharf", "Chelsea", "City of London", "Covent Garden", "Farringdon", "Hampstead", "Holborn", "Hyde Park", "Kensington", "Kings Cross", "Knightsbridge", "Lancaster Gate", "Maida Vale", "Marylebone", "Paddington", "Regents Park", "Soho", "St Johns Wood", "Swiss Cottage", "Westminster"],
-            "Miami": ["Aventura", "Bal Harbour ", "Bay Harbour Island ", "Bay Point", "Belle Meade Island", "Biscayne Island", "Brickell", "Coconut Grove", "Coral Gables", "Design District", "Doral", "Downtown Miami", "Edgewater", "Fisher Island", "Hibiscus Island", "Indian Creek Island", "Kendall", "Key Biscayne", "La Gorce", "Little Hati", "Little Havana", "Miami Beach", "Midtown", "Normandy Isles", "Normandy Shores", "Palmetto Bay", "Palm Island",
+    // CITY SELECTION
+    // enter custom locations for each city
+    const cityLocations = {
+        "London": ["Belgravia", "Camden", "Canary Wharf", "Chelsea", "City of London", "Covent Garden", "Farringdon", "Hampstead", "Holborn", "Hyde Park", "Kensington", "Kings Cross", "Knightsbridge", "Lancaster Gate", "Maida Vale", "Marylebone", "Paddington", "Regents Park", "Soho", "St Johns Wood", "Swiss Cottage", "Westminster"],
+        "Miami": ["Aventura", "Bal Harbour ", "Bay Harbour Island ", "Bay Point", "Belle Meade Island", "Biscayne Island", "Brickell", "Coconut Grove", "Coral Gables", "Design District", "Doral", "Downtown Miami", "Edgewater", "Fisher Island", "Hibiscus Island", "Indian Creek Island", "Kendall", "Key Biscayne", "La Gorce", "Little Hati", "Little Havana", "Miami Beach", "Midtown", "Normandy Isles", "Normandy Shores", "Palmetto Bay", "Palm Island",
             "South Beach", "South Miami", "Star Island", "Sunny Isles Beach", "Sunset Island", "Surfside", "Upper East Side", "Venetian Island", "Wynwood"],
-            "New York": ["Chelsea", "Chinatown", "East Village", "Financial District", "Flatiron", "Gramercy Park", "Greenwich", "Harlem", "Little Italy", "Lower East Side", "Lower Manhattan", "Meatpacking District", "Midtown Manhattan", "Midtown West", "Soho", "Tribeca", "Upper East Side", "Upper West Side", "Washington Heights", "West Village"],
-            "Cote d'Azur": ["Antibes", "Cannes", "Cap-Ferrat", "Eze", "Frejus", "Juan-les-Pins", "Mandelieu-la-Napoule", "Menton", "Monaco", "Nice", "Provenance", "Saint-Laurent-du-Var", "Saint-Maxime", "St-Paul-De-Vence", "Saint-Raphael", "Saint-Tropez"]
-            //... add more cities and locations as needed
-        };
+        "New York": ["Chelsea", "Chinatown", "East Village", "Financial District", "Flatiron", "Gramercy Park", "Greenwich", "Harlem", "Little Italy", "Lower East Side", "Lower Manhattan", "Meatpacking District", "Midtown Manhattan", "Midtown West", "Soho", "Tribeca", "Upper East Side", "Upper West Side", "Washington Heights", "West Village"],
+        "Cote d'Azur": ["Antibes", "Cannes", "Cap-Ferrat", "Eze", "Frejus", "Juan-les-Pins", "Mandelieu-la-Napoule", "Menton", "Monaco", "Nice", "Provenance", "Saint-Laurent-du-Var", "Saint-Maxime", "St-Paul-De-Vence", "Saint-Raphael", "Saint-Tropez"]
+        //... add more cities and locations as needed
+    };
 
 
-        // // Functionality for individual locations for each city
-        // function updateLocationCheckboxes(city) {
-        //     const locationSelectDiv = document.querySelector('#location-select');
-        //     const locations = cityLocations[city] || [];
-        //     let content = '<div class="dropdown-toggle">Click to select...</div>';
+    // Functionality for individual locations for each city
+    function updateLocationCheckboxes(city) {
+        const locationSelectDiv = document.querySelector('#location-select');
+        const locations = cityLocations[city] || [];
+        let content = '<div class="dropdown-toggle">Click to select...</div>';
 
-        //     content += '<select id="multiSelect" size="4" multiple="multiple">';
+        content += '<select id="multiSelect" size="4" multiple="multiple">';
 
-        //     locations.forEach((location, index) => {
-        //         content += `<option value="${location}">${location}</option>`;
-        //     });
+        locations.forEach((location, index) => {
+            content += `<option value="${location}">${location}</option>`;
+        });
 
-        //     content += '</select>';
-        //     locationSelectDiv.innerHTML = content;
+        content += '</select>';
+        locationSelectDiv.innerHTML = content;
 
-        //     // Initialize the dropdown behavior
-        //     initializeDropdown();
-        // }
-
-
-    //     // // Functionality for individual locations for each city
-    //     function updateLocationCheckboxes(city) {
-    //     const locationSelectDiv = document.querySelector('#location-select');
-    //     const locations = cityLocations[city] || [];
-    //     let content = '<div class="dropdown-toggle">Click to select...</div>';
-
-    //     content += '<select id="multiSelect" size="4" multiple="multiple">';
-
-    //     locations.forEach((location, index) => {
-    //         content += `<option value="${location}">${location}</option>`;
-    //     });
-
-    //     content += '</select>';
-        
-
-    //     // Create a temporary div to parse the content string into DOM nodes
-    //     const tempDiv = document.createElement('div');
-    //     tempDiv.innerHTML = content;
-
-    //     // Append each child of the temporary div (parsed nodes) to the #location-select div
-    //     while (tempDiv.firstChild) {
-    //         locationSelectDiv.appendChild(tempDiv.firstChild);
-    //     }
-
-    //     // Initialize the dropdown behavior
-    //     initializeDropdown();
-    // }
-
-//     function updateLocationCheckboxes(city) {
-//     const locationSelectDiv = document.querySelector('#location-select');
-//     const locations = cityLocations[city] || [];
-    
-//     // Remove the previous dropdown related contents
-//     const oldDropdownToggle = locationSelectDiv.querySelector('.dropdown-toggle');
-//     const oldMultiSelect = locationSelectDiv.querySelector('#multiSelect');
-//     if(oldDropdownToggle) oldDropdownToggle.remove();
-//     if(oldMultiSelect) oldMultiSelect.remove();
-
-//     let content = '<div class="dropdown-toggle">Click to select...</div>';
-
-//     content += '<select id="multiSelect" size="4" multiple="multiple">';
-
-//     locations.forEach((location, index) => {
-//         content += `<option value="${location}">${location}</option>`;
-//     });
-
-//     content += '</select>';
-    
-//     // Create a temporary div to parse the content string into DOM nodes
-//     const tempDiv = document.createElement('div');
-//     tempDiv.innerHTML = content;
-
-//     // Append each child of the temporary div (parsed nodes) to the #location-select div
-//     while (tempDiv.firstChild) {
-//         locationSelectDiv.appendChild(tempDiv.firstChild);
-//     }
-
-//     // Initialize the dropdown behavior
-//     initializeDropdown();
-// }
-
-// function updateLocationCheckboxes(city) {
-//     const locationSelectDiv = document.querySelector('#location-select');
-//     const locations = cityLocations[city] || [];
-//     const locationsLabel = document.querySelector('.locationsLabel');
-    
-//     // Set the locationsLabel to the format "City Name locations"
-//     if (locationsLabel) {
-//         locationsLabel.textContent = `${lastClickedCity} locations` || 'Select locations';
-//     }
-
-//     // Remove the previous dropdown related contents
-//     const oldDropdownToggle = locationSelectDiv.querySelector('.dropdown-toggle');
-//     const oldMultiSelect = locationSelectDiv.querySelector('#multiSelect');
-//     if(oldDropdownToggle) oldDropdownToggle.remove();
-//     if(oldMultiSelect) oldMultiSelect.remove();
-
-//     let content = '<div class="dropdown-toggle">Click to select...</div>';
-
-//     content += '<select id="multiSelect" size="4" multiple="multiple">';
-
-//     locations.forEach((location, index) => {
-//         content += `<option value="${location}">${location}</option>`;
-//     });
-
-//     content += '</select>';
-
-//     // Create a temporary div to parse the content string into DOM nodes
-//     const tempDiv = document.createElement('div');
-//     tempDiv.innerHTML = content;
-
-//     // Append each child of the temporary div (parsed nodes) to the #location-select div
-//     while (tempDiv.firstChild) {
-//         locationSelectDiv.appendChild(tempDiv.firstChild);
-//     }
-
-//     // Initialize the dropdown behavior
-//     initializeDropdown();
-// }
-// function updateLocationCheckboxes(city) {
-//     const locationSelectDiv = document.querySelector('#location-select');
-//     const locations = cityLocations[city] || [];
-//     const locationsLabel = document.querySelector('.locationsLabel');
-//     const cityLabel = document.querySelector('#c21 label');
-
-//     // Set the locationsLabel to the format "City Name locations"
-//     if (locationsLabel) {
-//         locationsLabel.textContent = `${lastClickedCity} locations`;
-//     }
-
-//     // Reset the cityLabel
-//     if (cityLabel) {
-//         cityLabel.textContent = 'Locations';
-//         cityLabel.classList.remove('active-label'); // Reset the class
-//     }
-
-//     // Remove the previous dropdown related contents
-//     const oldDropdownToggle = locationSelectDiv.querySelector('.dropdown-toggle');
-//     const oldMultiSelect = locationSelectDiv.querySelector('#multiSelect');
-//     if (oldDropdownToggle) oldDropdownToggle.remove();
-//     if (oldMultiSelect) oldMultiSelect.remove();
-
-//     let content = '<div class="dropdown-toggle">Click to select...</div>';
-
-//     content += '<select id="multiSelect" size="4" multiple="multiple">';
-
-//     locations.forEach((location, index) => {
-//         content += `<option value="${location}">${location}</option>`;
-//     });
-
-//     content += '</select>';
-
-//     // Create a temporary div to parse the content string into DOM nodes
-//     const tempDiv = document.createElement('div');
-//     tempDiv.innerHTML = content;
-
-//     // Append each child of the temporary div (parsed nodes) to the #location-select div
-//     while (tempDiv.firstChild) {
-//         locationSelectDiv.appendChild(tempDiv.firstChild);
-//     }
-
-//     // Initialize the dropdown behavior
-//     initializeDropdown();
-// }
-
-function updateLocationCheckboxes(city) {
-    const locationSelectDiv = document.querySelector('#location-select');
-    const locations = cityLocations[city] || [];
-    const locationsLabel = document.querySelector('.locationsLabel');
-    const cityLabel = document.querySelector('#c21 label');
-
-
-  
-
-    // Set the locationsLabel to the format "City Name locations" and remove the active-label class
-    if (locationsLabel) {
-        locationsLabel.textContent = `${lastClickedCity} locations`;
-        locationsLabel.classList.remove('active-label');
+        // Initialize the dropdown behavior
+        initializeDropdown();
     }
 
-    
-
-    // Reset the cityLabel
-    if (cityLabel) {
-        cityLabel.textContent = 'Locations';
-        cityLabel.classList.remove('active-label'); // Reset the class
-    }
-
-
-  
-    
-    // Remove the previous dropdown related contents
-    const oldDropdownToggle = locationSelectDiv.querySelector('.dropdown-toggle');
-    const oldMultiSelect = locationSelectDiv.querySelector('#multiSelect');
-    if (oldDropdownToggle) oldDropdownToggle.remove();
-    if (oldMultiSelect) oldMultiSelect.remove();
-
-    let content = '<div class="dropdown-toggle">Click to select...</div>';
-
-    content += '<select id="multiSelect" size="4" multiple="multiple">';
-
-    locations.forEach((location, index) => {
-        content += `<option value="${location}">${location}</option>`;
-    });
-
-    content += '</select>';
-
-    // Create a temporary div to parse the content string into DOM nodes
-    const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = content;
-
-    // Append each child of the temporary div (parsed nodes) to the #location-select div
-    while (tempDiv.firstChild) {
-        locationSelectDiv.appendChild(tempDiv.firstChild);
-    }
-
-    // Initialize the dropdown behavior
-    initializeDropdown();
-}
-
-
-
-    //     function initializeDropdown() {
-    //     const dropdownToggle = document.querySelector('.dropdown-toggle');
-    //     const selectElement = document.querySelector('#multiSelect');
-    //     const locationsLabel = document.querySelector('.locationsLabel');
-
-    //     dropdownToggle.addEventListener('click', function () {
-    //         if (selectElement.size === 1) {
-    //             selectElement.size = 4;
-    //         } else {
-    //             selectElement.size = 1;
-    //         }
-    //     });
-
-    //     selectElement.addEventListener('change', function (e) {
-    //     const selectedValues = Array.from(e.target.selectedOptions).map(opt => opt.text);
-    //     dropdownToggle.textContent = selectedValues.join(', ') || 'Click to select...';
-
-    //     // Update the locationsLabel based on the number of selected options
-    //     if (selectedValues.length === 0) {
-    //         locationsLabel.textContent = `${lastClickedCity} locations`;
-    //         locationsLabel.classList.remove('active-label');
-    //     } else {
-    //         locationsLabel.textContent = `${lastClickedCity} (${selectedValues.length})`;
-    //         locationsLabel.classList.add('active-label');
-    //     }
-    // });
     function initializeDropdown() {
-    const dropdownToggle = document.querySelector('.dropdown-toggle');
-    const selectElement = document.querySelector('#multiSelect');
-    const locationsLabel = document.querySelector('.locationsLabel');
-    const cityLabel = document.querySelector('#c21 label');
+        const dropdownToggle = document.querySelector('.dropdown-toggle');
+        const selectElement = document.querySelector('#multiSelect');
 
-    dropdownToggle.addEventListener('click', function () {
-        if (selectElement.size === 1) {
-            selectElement.size = 4;
-        } else {
-            selectElement.size = 1;
-        }
-    });
-
-    selectElement.addEventListener('change', function (e) {
-        const selectedValues = Array.from(e.target.selectedOptions).map(opt => opt.text);
-        dropdownToggle.textContent = selectedValues.join(', ') || 'Click to select...';
-
-           // Update the hasSelection variable
-    hasSelection = selectedValues.length > 0;
-
-        let cityLabelText;
-        let locationsLabelText;
-
-        if (selectedValues.length === 0) {
-            cityLabelText = 'Locations';
-            locationsLabelText = `${lastClickedCity} locations`;
-
-            if (cityLabel) {
-                cityLabel.classList.remove('active-label');
+        dropdownToggle.addEventListener('click', function () {
+            if (selectElement.size === 1) {
+                selectElement.size = 4;
+            } else {
+                selectElement.size = 1;
             }
-            if (locationsLabel) {
-                locationsLabel.classList.remove('active-label');
+        });
+
+        selectElement.addEventListener('change', function (e) {
+            const selectedValues = Array.from(e.target.selectedOptions).map(opt => opt.text);
+            dropdownToggle.textContent = selectedValues.join(', ') || 'Click to select...';
+        });
+
+        // Handle multiple selection without holding CTRL on desktop
+        selectElement.addEventListener('mousedown', function (e) {
+            const clickedOption = e.target;
+            if (clickedOption.tagName === 'OPTION') {
+                e.preventDefault();
+                clickedOption.selected = !clickedOption.selected;
+                const event = new Event('change', {
+                    'bubbles': true,
+                    'cancelable': true
+                });
+                selectElement.dispatchEvent(event);
             }
-
-        } else if (selectedValues.length === 1) {
-            cityLabelText = `1 Location`;
-            locationsLabelText = `${lastClickedCity} (1)`;
-            if (cityLabel) {
-                cityLabel.classList.add('active-label');
-            }
-            if (locationsLabel) {
-                locationsLabel.classList.add('active-label');
-            }
-
-        } else {
-            cityLabelText = `${selectedValues.length} Locations`;
-            locationsLabelText = `${lastClickedCity} (${selectedValues.length})`;
-            if (cityLabel) {
-                cityLabel.classList.add('active-label');
-            }
-            if (locationsLabel) {
-                locationsLabel.classList.add('active-label');
-            }
-        }
-
-        if (cityLabel) {
-            cityLabel.textContent = cityLabelText;
-        }
-
-        if (locationsLabel) {
-            locationsLabel.textContent = locationsLabelText;
-        }
-    });
+        });
+    }
 
 
 
-            // Handle multiple selection without holding CTRL on desktop
-            selectElement.addEventListener('mousedown', function (e) {
-                const clickedOption = e.target;
-                if (clickedOption.tagName === 'OPTION') {
-                    e.preventDefault();
-                    clickedOption.selected = !clickedOption.selected;
-                    const event = new Event('change', {
-                        'bubbles': true,
-                        'cancelable': true
-                    });
-                    selectElement.dispatchEvent(event);
-                }
-            });
-        }
 
+    // // Register selected city 
+    // let lastClickedCity = null;
+
+    // document.addEventListener('click', function(event) {
+    //     // Check if clicked element is a label and associated with our checkbox
+    //     if (event.target.tagName.toLowerCase() === 'label' && event.target.getAttribute('for') === 'next-section-2') {
+    //         lastClickedCity = event.target.getAttribute('data-city');
+    //         console.log("Last clicked city:", lastClickedCity);
+
+    //         // Change the body's background color
+    //         const color = event.target.getAttribute('data-color');
+    //         document.body.style.backgroundColor = color;
+
+
+    //         // Set the name of the last clicked city to the label in c21
+    //         const cityLabel = document.querySelector('#c21 label');
+    //         if (cityLabel) {
+    //             cityLabel.textContent = lastClickedCity;
+    //         }
+
+    //         // Update the checkboxes based on the clicked city
+    //         updateLocationCheckboxes(lastClickedCity);
+
+    //           // Set the background color for the select menu
+    //           const selectMenu = document.getElementById('multiSelect');
+    //         if (selectMenu) {
+    //             selectMenu.style.backgroundColor = color;
+    //         }
+
+
+
+    //     }
+
+    // });
 
     // Output the Check out calendar result
     function updateCity() {
@@ -2454,16 +1846,11 @@ function updateLocationCheckboxes(city) {
             // Add the 'active-label' class to the clicked label
             event.target.classList.add('active-label');
 
-            // // Set the name of the last clicked city to the label in c21
-            // const cityLabel = document.querySelector('#c21 label');
-            // if (cityLabel) {
-            //     cityLabel.textContent = lastClickedCity;
-            // }
-
-//             const locationSelectDiv = document.querySelector('#locationSelect');
-// if (locationSelectDiv) {
-//     locationSelectDiv.textContent = lastClickedCity;
-// }
+            // Set the name of the last clicked city to the label in c21
+            const cityLabel = document.querySelector('#c21 label');
+            if (cityLabel) {
+                cityLabel.textContent = lastClickedCity;
+            }
 
             // Update the checkboxes based on the clicked city
             updateLocationCheckboxes(lastClickedCity);
@@ -2611,16 +1998,125 @@ function updateLocationCheckboxes(city) {
 
 
     //  COSMETIC EFFECTS PT 2
-   
+    // const labelForCheckbox = document.querySelector('label[for="yourCheckboxId"]'); // Replace 'yourCheckboxId' with the actual id
+    // const increaseButton = document.getElementById('increaseButton');
+    // const decreaseButton = document.getElementById('decreaseButton');
+    // let buttonClicked = false;  // Flag to track if the buttons have been clicked
+
+    // // I'm assuming currentAdultCount exists and gets updated in your code
+    // let adultCountValue = currentAdultCount; 
+
+    // increaseButton.addEventListener('click', function() {
+    //     buttonClicked = true;
+    //     labelForCheckbox.classList.add('active-label'); // Add the class to the label
+    // });
+
+    // decreaseButton.addEventListener('click', function() {
+    //     // Only set buttonClicked to true and add the class if adultCountValue is above 0 after decrement
+    //     adultCountValue--; // Decrease the value
+    //     if(adultCountValue > 0) {
+    //         buttonClicked = true;
+    //         labelForCheckbox.classList.add('active-label');
+    //     }
+    // });
+
+    // // If this label is clicked, add the class
+    // labelForCheckbox.addEventListener('click', function() {
+    //     labelForCheckbox.classList.add('active-label'); 
+    // });
+
+    // // If any other label is clicked, check the buttonClicked flag and remove the class if necessary
+    // const allLabels = document.querySelectorAll('label');
+    // allLabels.forEach(function(label) {
+    //     if (label !== labelForCheckbox) {
+    //         label.addEventListener('click', function() {
+    //             if (!buttonClicked) {
+    //                 labelForCheckbox.classList.remove('active-label');
+    //             }
+    //         });
+    //     }
+    // });
+
+    // function updateAdultLabelClass() {
+    //     const adultCountLabel = document.querySelector('label[for="next-section-22"]');
+
+    //     if (currentAdultCount === 0 && currentIndex === 1) {
+    //         adultCountLabel.classList.remove('active-label');
+    //     } 
+    // }
+
+
+
+
+    // function updateActiveLabelStatus() {
+    //     const labelForCurrentIndex = document.querySelector(`label[for="${indexLabelMapping[currentIndex]}"]`);
+
+    //     // Check for any inputs being filled, buttons being clicked, or calendars being activated.
+    //     // This is a simplification for brevity; you can expand upon this based on your real-world requirements.
+    //     const shouldRetainActiveClass =
+    //         buttonClicked ||
+    //         calendarButtonClicked ||
+    //         calendarButtonClicked2 ||
+    //         Array.from(document.querySelectorAll('input[type="checkbox"]')).some(cb => cb.checked);
+
+    //     if (shouldRetainActiveClass) {
+    //         labelForCurrentIndex.classList.add('active-label');
+    //     } else {
+    //         labelForCurrentIndex.classList.remove('active-label');
+    //     }
+    // }
+
+
+
     // EXTRACT VALUES FOR CONFIRMATION PAGE
     document.addEventListener('DOMContentLoaded', () => {
- 
+        // Variable to hold the bedBathValue
+        // let bedBathValue = "";
+
+
+        // // Function to update check in preview
+        //     function printCheckInDate(dateText) {
+        //     document.getElementById('outputCheckInDate').innerText = dateText;
+        // }
+        // // Function to update check out preview
+        // function printCheckOutDate(dateText) {
+        //     document.getElementById('outputCheckOutDate').innerText = dateText;
+        // }
+
 
 
 
     });
 
 
+
+
+    // // Update radio button results
+    // // Function to update preview
+    // const updatePreview = (radioName, outputElementId) => {
+    //     const selectedRadio = document.querySelector(`input[name="${radioName}"]:checked`);
+    //     if (selectedRadio) {
+    //         document.getElementById(outputElementId).innerText = selectedRadio.value;
+    //     }
+    // }
+
+    // // Function to set up radio buttons event listener
+    // const setupRadioButtons = (radioName, outputElementId) => {
+    //     const radioButtons = document.querySelectorAll(`input[name="${radioName}"]`);
+    //     radioButtons.forEach(radio => {
+    //         radio.addEventListener('change', function() {
+    //             if (this.checked) {
+    //                 updatePreview(radioName, outputElementId);
+    //             }
+    //         });
+    //     });
+    // }
+    // // Usage
+    // document.addEventListener('DOMContentLoaded', () => { 
+    //     setupRadioButtons('priceBand', 'outputCost');
+    //     setupRadioButtons('priorityLevel', 'outputPriorityLevel');
+    //     setupRadioButtons('currencyType' , 'outputCurrencyType');
+    // });
 
     // Update radio button results
     // Function to update preview
@@ -2765,54 +2261,7 @@ function validateDates() {
     }
 }
 
-// FUNCTIONALITY FOR REVEALING SUBMIT BUTTON
 
-document.addEventListener('DOMContentLoaded', function() {
-    const outputIds = [
-        "outputTitle", "outputFirstName", "outputTaskName", 
-        "outputCity", "outputCheckInDate", "outputCheckOutDate", 
-        "outputAdultGuests", "resultOutputId", 
-        "outputCost", "outputPriorityLevel", "outputEmailAddress"
-    ];
-
-    const submitButton = document.querySelector('.create-task');
-
-    function checkOutputs() {
-        let allFilled = outputIds.every(id => {
-            const element = document.getElementById(id);
-            return element && element.textContent.trim() !== '' && element.textContent.trim() !== 'placeholder';
-        });
-
-        if (allFilled) {
-            submitButton.classList.add('ready-to-submit');
-        } else {
-            submitButton.classList.remove('ready-to-submit');
-        }
-    }
-
-    // Initialize MutationObserver
-    const observer = new MutationObserver(mutations => {
-        mutations.forEach(mutation => {
-            if (mutation.type === 'childList' || mutation.type === 'characterData') {
-                checkOutputs();
-            }
-        });
-    });
-
-    // Options for the observer (which mutations to observe)
-    const config = { childList: true, characterData: true, subtree: true };
-
-    // Start observing the target nodes
-    outputIds.forEach(id => {
-        const targetNode = document.getElementById(id);
-        if (targetNode) {
-            observer.observe(targetNode, config);
-        }
-    });
-
-    // Initial check
-    checkOutputs();
-});
 
 
 </script>

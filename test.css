@@ -164,6 +164,7 @@ body{
 
 
 
+
 label{
   color: var(--white);
   font-size: 1.25rem;
@@ -201,7 +202,6 @@ label[for="back-section"] {
       display: block;
   }
 }
-
 
 
 

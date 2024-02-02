@@ -108,6 +108,8 @@ td.is-empty{
     width: 40px;
     height: 40px;
     visibility: visible;
+    padding: 5px; 
+   
 }
 .pika-table td .pika-button:hover {
     border: 1px solid white;
@@ -191,6 +193,7 @@ table.pika-table{
 
     vertical-align: middle; /* Center content vertically */
     text-align: left;
+
     
 }
 
@@ -226,6 +229,7 @@ table.pika-table{
 display: none;
 }
 
+/* native mobile menu modal controls */
 #multiSelect {
     border: none;
     outline: none;
@@ -237,10 +241,20 @@ display: none;
     margin: 0;
     font-size: 1.25rem;
     color: white;
+    opacity: 0;
+    position: relative;
+    top: -1.62rem;
+}
+.locationsLabel{
+    font-size: 1.25rem;
+    color: white;
+    opacity: .4;
+}
+.locationsLabel.active-label{
+    opacity: 1;
 }
 
-
-#multiSelect {
+/* #multiSelect {
     border: none;
     outline: none;
     padding: 0;
@@ -249,14 +263,9 @@ display: none;
     color: white;
     background-color: #f2f2f2;
     
-}
-
-select option:hover{
+} */
 
 
-   color: red;
-   cursor: pointer;
-}
 
 .custom-dropdown {
     position: relative;
@@ -327,7 +336,7 @@ input:-ms-input-placeholder { /* IE 10+ */
     opacity: .4;
 }
 
-a, button, [role="button"], label, input, textarea {
+a, button, [role="button"], label, input, textarea, #multiSelect {
     -webkit-tap-highlight-color: transparent;
     outline: none;
     -webkit-focus-ring-color: transparent;
@@ -434,11 +443,53 @@ p#outputTaskName {
     top:0;
 }
 
+/* Adjust spacings for inline results */
+.inline-container p#outputCheckInDate {
+    margin-right: .3ch;
+}
+/* Adjust spacings for inline results */
+.inline-container p#outputAdultGuests {
+    margin-right: .1ch;
+}
+
+
 #outputCheckInDate.same-year{
     height: 1ch;
     overflow-y: hidden;
-    max-width: 6.5ch !important;
+    
+
 }
 #outputCheckInDate.same-month-year{
-    background:red;
+    height: 1ch;
+    overflow-y: hidden;
+    padding-right: 0;
 }
+
+#outputCheckInDate.same-year .date-year{
+
+    display: none;
+}
+
+#outputCheckInDate.same-month-year .date-year,
+#outputCheckInDate.same-month-year .date-month{
+    display: none;
+}
+
+/* Style the submit button before and after ready requirements */
+.create-task{
+opacity: 0.4;
+background: none;
+border-style: none;
+font-family: "300";
+font-size: 1.25rem;
+pointer-events: none;
+color: white;
+font-weight: normal;
+
+
+}
+
+.create-task.ready-to-submit{
+    opacity: 1;
+    pointer-events: all;
+    }
